@@ -1,7 +1,6 @@
 # kupa_hypr
 
 made for arch :)
-preinstall git and neovim
 
 ```
 #smile
@@ -11,3 +10,4 @@ cd
 chmod +x set-kupa
 
 ```
+must preinstall git and neovim
