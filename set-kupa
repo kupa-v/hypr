@@ -33,7 +33,6 @@
 # neofetch: displays information about the operating system, software, and hardware in a visually appealing way
 # btop: Resource monitor that shows usage and stats for processor, memory, disks, network and processes.
 # pacman-contrib: adds additional tools for pacman. needed for showing system updates in the waybar
-# starship: allows to customize the shell prompt
 # gohufont-otb: a monospace bitmap font well suited for programming and terminal use
 # noto-fonts-emoji: fonts needed by the weather script in the top bar
 # lxappearance: used to set GTK theme
@@ -157,7 +156,7 @@ if [[ $INST == "Y" || $INST == "y" ]]; then
 
     #Stage 3
     echo -e "\n$CNT - Stage 3 - Installing theme and visual related tools and utilities, this may take a while..."
-    for SOFTWR in starship gohufont-otb noto-fonts-emoji materia-gtk-theme papirus-icon-theme lxappearance xfce4-settings qt5-svg qt5-quickcontrols2 qt5-graphicaleffects
+    for SOFTWR in gohufont-otb noto-fonts-emoji materia-gtk-theme papirus-icon-theme lxappearance xfce4-settings qt5-svg qt5-quickcontrols2 qt5-graphicaleffects
     do
         #First lets see if the package is there
         if yay -Qs $SOFTWR > /dev/null ; then
@@ -205,21 +204,10 @@ if [[ $CFG == "Y" || $CFG == "y" ]]; then
         cp -R $DIR ~/.config/ &>> $INSTLOG
     done
 
-    # Set some files as exacutable
+    # Set some files as executable
     echo -e "$CNT - Setting some file as executable." 
     chmod +x ~/.config/hypr/scripts/bgaction
     chmod +x ~/.config/hypr/scripts/xdg-portal-hyprland
-fi
-
-### Install the starship shell ###
-read -n1 -rep $'[\e[1;33mACTION\e[0m] - Would you like to activate the starship shell? (y,n) ' STAR
-if [[ $STAR == "Y" || $STAR == "y" ]]; then
-    # install the starship shell
-    echo -e "$CNT - Hansen Crusher, Engage!"
-    echo -e "$CNT - Updating .bashrc..."
-    echo -e '\neval "$(starship init bash)"' >> ~/.bashrc
-    echo -e "$CNT - copying starship config file to ~/.confg ..."
-    cp extras/starship.toml ~/.config/
 fi
 
 ### Script is done ###
