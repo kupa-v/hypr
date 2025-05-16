@@ -38,7 +38,6 @@
 # noto-fonts-emoji: fonts needed by the weather script in the top bar
 # lxappearance: used to set GTK theme
 # xfce4-settings: set of tools for xfce, needed to set GTK theme
-# sddm-git: developement version of SDDM which is a display manager for graphical login
 
 # set some colors
 CNT="[\e[1;36mNOTE\e[0m]"
@@ -163,7 +162,7 @@ if [[ $INST == "Y" || $INST == "y" ]]; then
 
     #Stage 3
     echo -e "\n$CNT - Stage 3 - Installing theme and visual related tools and utilities, this may take a while..."
-    for SOFTWR in starship gohufont-otb noto-fonts-emoji materia-gtk-theme papirus-icon-theme lxappearance xfce4-settings sddm-git qt5-svg qt5-quickcontrols2 qt5-graphicaleffects
+    for SOFTWR in starship gohufont-otb noto-fonts-emoji materia-gtk-theme papirus-icon-theme lxappearance xfce4-settings qt5-svg qt5-quickcontrols2 qt5-graphicaleffects
     do
         #First lets see if the package is there
         if yay -Qs $SOFTWR > /dev/null ; then
