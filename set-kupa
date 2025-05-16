@@ -53,11 +53,6 @@ clear
 
 # set some expectations for the user
 echo -e "$CNT - You are about to execute a script that would attempt to setup Hyprland.
-Please note that Hyprland is still in Beta.
-Please note that VMs are not fully supported and if you try to run this on
-a Virtual Machine there is a high chance this will fail.
-Please note that support for Nvidia GPUs is limited and may require
-more work which is beyond the scope of this script.
 \n"
 
 sleep 3
