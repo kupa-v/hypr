@@ -22,4 +22,4 @@ chmod +x set-kupa
 ./set-kupa
 
 ```
-must preinstall git and neovim
+must preinstall git, neovim + fastfetch
