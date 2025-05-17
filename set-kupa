@@ -30,7 +30,7 @@
 # gvfs: adds missing functionality to thunar such as automount usb drives
 # thunar-archive-plugin: Provides a front ent for thunar to work with compressed files
 # file-roller: Backend set of tools for working with compressed files
-# neofetch: displays information about the operating system, software, and hardware in a visually appealing way
+# fastfetch: displays information about the operating system, software, and hardware in a visually appealing way
 # btop: Resource monitor that shows usage and stats for processor, memory, disks, network and processes.
 # pacman-contrib: adds additional tools for pacman. needed for showing system updates in the waybar
 # gohufont-otb: a monospace bitmap font well suited for programming and terminal use
@@ -137,7 +137,7 @@ if [[ $INST == "Y" || $INST == "y" ]]; then
 
     #Stage 2
     echo -e "\n$CNT - Stage 2 - Installing additional tools and utilities, this may take a while..."
-    for SOFTWR in polkit-gnome python-requests pamixer pavucontrol brightnessctl bluez bluez-utils blueman network-manager-applet gvfs thunar-archive-plugin file-roller btop neofetch pacman-contrib
+    for SOFTWR in polkit-gnome python-requests pamixer pavucontrol brightnessctl bluez bluez-utils blueman network-manager-applet gvfs thunar-archive-plugin file-roller btop fastfetch pacman-contrib
     do
         #First lets see if the package is there
         if yay -Qs $SOFTWR > /dev/null ; then
@@ -192,7 +192,7 @@ fi
 read -n1 -rep $'[\e[1;33mACTION\e[0m] - Would you like to copy config files? (y,n) ' CFG
 if [[ $CFG == "Y" || $CFG == "y" ]]; then
     echo -e "$CNT - Copying config files..."
-    for DIR in hypr
+    for DIR in hypr alacritty
     do 
         DIRPATH=~/.config/$DIR
         if [ -d "$DIRPATH" ]; then 
@@ -214,7 +214,7 @@ fi
 echo -e "$CNT - Script had completed!"
 read -n1 -rep $'[\e[1;33mACTION\e[0m] - Would you like to start Hyprland now? (y,n) ' HYP
 if [[ $HYP == "Y" || $HYP == "y" ]]; then
-    exec sudo systemctl start sddm &>> $INSTLOG
+    exec hyprland &>> $INSTLOG
 else
     exit
 fi
