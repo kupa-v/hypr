@@ -3,6 +3,15 @@
 made for arch :)
 
 ```
+
+iwctl
+station wlan0 connect "~"
+quit
+
+pacman-key --init
+pacman-key --populate archlinux
+archinstall
+
 #smile
 
 nmcli device wifi connect "~" password "~"
