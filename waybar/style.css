@@ -1,13 +1,13 @@
 /* Global Defaults */
 * {
-  border: none;
-  border-radius: 0;
+  border: 2px solid #66ccff;
+  border-radius: 2px;
   padding: 2px 8px 2px 8px; 
   margin: 0 4px;
   font-family: GohuFont;
   font-size: 13px;
-  background: transparent;
-  color: #e0e0e0;
+  /* background: transparent; */
+  background: #3c3c4e;
 }
 
 /* Shared Module Styling */
@@ -36,7 +36,6 @@
 /* Volume Module */
 #custom-volume {
   min-width: 130px;
-  background: #3c3c4e;
   color: #fff;
 }
 
