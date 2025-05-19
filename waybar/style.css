@@ -33,31 +33,6 @@
   color: #e0e0e0;
 }
 
-/* Square brackets */
-/* #clock::before,
-#custom-power::before,
-#network::before,
-#bluetooth::before,
-#custom-mic::before,
-#custom-status::before,
-#battery::before,
-#pulseaudio::before {
-  content: "[";
-  margin-right: 4px;
-}
-
-#clock::after,
-#custom-power::after,
-#network::after,
-#bluetooth::after,
-#custom-mic::after,
-#custom-status::after,
-#battery::after,
-#pulseaudio::after {
-  content: "]";
-  margin-left: 4px;
-} */
-
 /* Battery bar */
 #battery {
   background: #1e1e2e;
