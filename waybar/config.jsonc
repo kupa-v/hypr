@@ -45,6 +45,7 @@
   "custom/battery": {
     "exec": "~/.config/waybar/scripts/battery_bar.sh",
     "interval": 30,
-    "tooltip": false
+    "tooltip": false,
+    "return-type": "json"
   }
 }

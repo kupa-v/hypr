@@ -1,12 +1,10 @@
-/* renamed from 'Waybar Style' to 'style.css' */
-
 /* Global Defaults */
 * {
   border: none;
   border-radius: 0;
   padding: 0 8px;
   margin: 0 4px;
-  font-family: JetBrainsMono Nerd Font, monospace;
+  font-family: GohuFont, JetBrainsMono Nerd Font, monospace;
   font-size: 11px;
   background: transparent;
   color: #e0e0e0;
@@ -27,7 +25,9 @@
 #bluetooth,
 #custom-status,
 #custom-battery,
-#custom-volume {
+#custom-volume,
+#custom-power,
+#custom-mic {
   background-color: #1e1e2e;
   border: 1px solid #3c3c4e;
   padding: 0 10px;
@@ -40,21 +40,38 @@
 #bluetooth:hover,
 #custom-status:hover,
 #custom-battery:hover,
-#custom-volume:hover {
+#custom-volume:hover,
+#custom-power:hover,
+#custom-mic:hover {
   background-color: #44475a;
   border-color: #6272a4;
 }
 
-/* Battery bar color override */
+/* Battery bar color states */
+#custom-battery.verylow {
+  color: #fd5753;
+}
+#custom-battery.low {
+  color: #fb9d4b;
+}
+#custom-battery.medium {
+  color: #daef4d;
+}
+#custom-battery.good {
+  color: #4ef499;
+}
+#custom-battery.full {
+  color: #52f298;
+}
+#custom-battery.charging {
+  color: #a3d4f7;
+}
+
+/* Battery bar */
 #custom-battery {
   min-width: 130px;
   background: #1e1e2e;
   color: white;
-}
-
-/* Critical battery state */
-#custom-battery.critical {
-  color: #ff5555;
 }
 
 /* Audio volume bar styling */
