@@ -45,10 +45,10 @@
   color: #ff5555;
 }
 
-/* PulseAudio bar (horizontal visual like the image) */
+/* PulseAudio bar (static fallback) */
 #pulseaudio {
   min-width: 130px;
-  background: linear-gradient(to right, #f28b82 0%, #f28b82 var(--volume), #3c3c4e var(--volume), #3c3c4e 100%);
+  background: #3c3c4e;
   color: #ffffff;
   text-align: right;
 }
