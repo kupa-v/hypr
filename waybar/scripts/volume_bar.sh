@@ -19,6 +19,9 @@ muted=$(pactl get-sink-mute "$sink" | awk '{print $2}')
 # Handle missing volume case
 volume=${volume:-0}
 
+# Pad volume as two-digit number
+volume_fmt=$(printf "%02d" "$volume")
+
 # Create bar
 filled=$((volume / 10))
 empty=$((10 - filled))
@@ -37,5 +40,5 @@ else
   else
     icon=""
   fi
-  printf "%s [ %s ] %s%%\n" "$icon" "$bar" "$volume"
+  printf "%s [ %s ] %s%%\n" "$icon" "$bar" "$volume_fmt"
 fi
