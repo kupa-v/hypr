@@ -11,17 +11,17 @@ bar+=$(printf '░%.0s' $(seq 1 $empty))
 
 # Choose icon
 if [ "$status" = "Charging" ]; then
-  icon=""
+  icon="󰂄"
 elif [ "$capacity" -le 15 ]; then
-  icon=""
+  icon="󰁺"
 elif [ "$capacity" -le 30 ]; then
-  icon=""
+  icon="󰁼"
 elif [ "$capacity" -le 50 ]; then
-  icon=""
+  icon="󰁾"
 elif [ "$capacity" -le 80 ]; then
-  icon=""
+  icon="󰂁"
 else
-  icon=""
+  icon="󰁹"
 fi
 
 echo "$icon [ $bar ] $capacity%"
