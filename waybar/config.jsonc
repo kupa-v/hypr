@@ -13,13 +13,13 @@
   "modules-right": ["pulseaudio", "battery"],
 
   "clock": {
-    "format": "[  {:%I:%M %p}]",
+    "format": "[   {:%I:%M %p} ]",
     "tooltip-format": "{:%A, %B %d, %Y}",
     "interval": 60
   },
 
   "network": {
-    "format": "[ ]",
+    "format": "[  ]",
     "tooltip": false,
     "on-click": "nm-connection-editor"
   },
@@ -31,7 +31,7 @@
   },
 
   "custom/status": {
-    "format": "[REACTOR SLEEP]",
+    "format": "[smile]",
     "tooltip": false
   },
 
