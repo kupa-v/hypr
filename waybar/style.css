@@ -13,8 +13,8 @@
 /* Waybar Container */
 #waybar {
   background: #000;
-  margin: 20px 20px 0 20px;
-  min-height: 35px;
+  margin: 10px 15px 0 15px;
+  min-height: 40px;
 }
 
 /* Shared Module Styling */
