@@ -107,3 +107,15 @@
   background-color: #0f0f0f;
   padding: 0 12px;
 }
+
+/* Tooltip styling */
+tooltip {
+  background: #000000;
+  color: #e0e0e0;
+  padding: 6px 10px;
+  border-radius: 4px;
+  border: 1px solid #444;
+  font-family: GohuFont, monospace;
+  font-size: 11px;
+  margin-top: 2px;
+}
