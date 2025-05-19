@@ -10,6 +10,11 @@
   color: #e0e0e0;
 }
 
+.icon {
+  font-family: JetBrainsMono Nerd Font, monospace;
+  font-size: 13px;
+}
+
 /* Waybar container */
 #waybar {
   background: #000000;
@@ -32,6 +37,20 @@
   border: 1px solid #3c3c4e;
   padding: 0 10px;
   color: #e0e0e0;
+  font-family: GohuFont;
+}
+
+/* Ensure icons always use icon style */
+#clock .icon,
+#network .icon,
+#bluetooth .icon,
+#custom-status .icon,
+#custom-battery .icon,
+#custom-volume .icon,
+#custom-power .icon,
+#custom-mic .icon {
+  font-family: JetBrainsMono Nerd Font, monospace;
+  font-size: 13px;
 }
 
 /* Hover feedback */

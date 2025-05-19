@@ -19,20 +19,24 @@ capacity_fmt=$(printf "%02d" "$capacity")
 
 # Icon selection
 if [ "$status" = "Charging" ]; then
-  icon=""
+  icon="󰂄"
   color_class="charging"
 else
-  icon=""
   if [ "$capacity" -le 15 ]; then
     color_class="verylow"
+	icon="󰁺"
   elif [ "$capacity" -le 40 ]; then
     color_class="low"
+	icon="󰁽"
   elif [ "$capacity" -le 60 ]; then
     color_class="medium"
+	icon="󰁿"
   elif [ "$capacity" -le 80 ]; then
     color_class="good"
+	icon="󰂁"
   else
     color_class="full"
+	icon="󰁹"
   fi
 fi
 
