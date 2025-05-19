@@ -13,7 +13,7 @@
   "modules-right": ["custom/volume", "custom/battery"],
 
   "clock": {
-    "format": "<span class='icon'></span> {:%H:%M}",
+    "format": "<span font_desc='JetBrainsMono Nerd Font 13'></span> {:%H:%M}",
     "tooltip-format": "{:%A, %B %d, %Y}",
     "interval": 60,
     "markup": "pango"
