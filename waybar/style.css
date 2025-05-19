@@ -7,33 +7,20 @@
 
 /* Shared Module Styling */
 #clock{
-	padding: 6px 10px;
-}
-#network,
-#bluetooth,
-#custom-status,
-#custom-battery,
-#custom-volume,
-
-/* Battery Levels */
-#custom-battery.verylow { color: #fd5753; }
-#custom-battery.low     { color: #fb9d4b; }
-#custom-battery.medium  { color: #daef4d; }
-#custom-battery.good    { color: #4ef499; }
-#custom-battery.full    { color: #52f298; }
-#custom-battery.charging{ color: #a3d4f7; }
-
-/* Battery Specific Styling */
-#custom-battery {
-  min-width: 130px;
-  background: #1e1e2e;
-  color: #fff;
+	padding: 4px;
+	border-radius: 4px;
 }
 
-/* Volume Module */
-#custom-volume {
-  min-width: 130px;
-  color: #fff;
+/* Network Styling */
+#network{
+	padding: 4px;
+	border-radius: 4px;
+}
+
+/* Bluetooth Styling */
+#bluetooth{
+	padding: 4px;
+	border-radius: 4px;
 }
 
 /* Status Module */
@@ -42,7 +29,33 @@
   color: #66ccff;
   background: #0f0f0f;
   padding: 0 20px;
+  border-radius: 4px;
 }
+
+/* Volume Module */
+#custom-volume {
+  min-width: 130px;
+  color: #fff;
+  padding: 4px;
+  border-radius: 4px;
+}
+
+/* Battery Specific Styling */
+#custom-battery {
+  min-width: 130px;
+  background: #1e1e2e;
+  color: #fff;
+  padding: 4px;
+  border-radius: 4px;
+}
+
+/* Battery Levels */
+#custom-battery.verylow { color: #fd5753; }
+#custom-battery.low     { color: #fb9d4b; }
+#custom-battery.medium  { color: #daef4d; }
+#custom-battery.good    { color: #4ef499; }
+#custom-battery.full    { color: #52f298; }
+#custom-battery.charging{ color: #a3d4f7; }
 
 /* Tooltip */
 tooltip {
