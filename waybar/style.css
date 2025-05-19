@@ -4,7 +4,7 @@
   color: #ffffff;
   border: none;
   background: transparent;
-  padding: 0 6px;
+  min-height: 0;
 }
 
 window#waybar {
@@ -15,6 +15,7 @@ window#waybar {
   height: 35px;
 }
 
+/* Style each module box */
 #clock,
 #custom-power,
 #network,
@@ -26,11 +27,11 @@ window#waybar {
 #battery {
   background-color: #2e2e3e;
   margin: 2px;
-  padding: 2px 10px;
-  border-radius: 6px;
+  padding: 0 8px;
+  border-radius: 4px;
 }
 
-/* Add square brackets */
+/* Add square brackets around module content */
 #clock::before,
 #custom-power::before,
 #network::before,
