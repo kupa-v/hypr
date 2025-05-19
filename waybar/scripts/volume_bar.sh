@@ -3,12 +3,18 @@
 # Get the default sink
 sink=$(pactl info | awk -F': ' '/Default Sink/ {print $2}')
 
-# Get volume from that sink
+# Get the highest volume percentage from all channels of the sink
 volume=$(pactl list sinks | awk -v sink="$sink" '
   $0 ~ "Name: "sink {in_sink=1}
   in_sink && /Volume:/ {
-    match($0, /[0-9]+%/, vol)
-    print substr(vol[0], 1, length(vol[0])-1)
+    max=0
+    for (i=1; i<=NF; i++) {
+      if ($i ~ /%$/) {
+        val = substr($i, 1, length($i)-1)
+        if (val+0 > max) max=val
+      }
+    }
+    print max
     exit
   }
 ')
@@ -16,17 +22,13 @@ volume=$(pactl list sinks | awk -v sink="$sink" '
 # Get mute state
 muted=$(pactl get-sink-mute "$sink" | awk '{print $2}')
 
-# Handle missing volume case
-volume=${volume:-0}
-volume_fmt=$(printf "%02d" "$volume")
+# Format volume (allow >100%)
+volume_fmt=$(printf "%03d" "$volume")
 
-# Clamp bar only, not the percentage
-filled=$((volume / 10))
-((filled > 10)) && filled=10
+# Clamp bar at 100%
+filled=$((volume > 100 ? 10 : volume / 10))
 empty=$((10 - filled))
-((empty < 0)) && empty=0
 
-# Build bar
 bar=""
 if (( filled > 0 )); then
   bar+=$(printf '█%.0s' $(seq 1 $filled))
