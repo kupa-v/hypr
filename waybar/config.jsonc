@@ -8,7 +8,7 @@
   "margin-right": 10,
   "height": 40,
 
-  "modules-left": ["clock", "network", "bluetooth", "custom/mic"],
+  "modules-left": ["clock", "network", "bluetooth", "custom/lang"],
   "modules-center": ["custom/status"],
   "modules-right": ["custom/volume", "custom/battery"],
 
@@ -33,6 +33,16 @@
     "tooltip-format": "[ {device_alias} ]",
     "on-click": "blueman-manager",
     "markup": "pango"
+  },
+  
+  "custom/lang": {
+  "exec": "~/.config/waybar/scripts/language_switcher.sh",
+  "interval": 2,
+  "tooltip": false,
+  "on-click": "~/.config/waybar/scripts/language_switcher.sh toggle",
+  "format": "[ {} ]",
+  "return-type": "text",
+  "markup": "pango"
   },
 
   "custom/status": {
