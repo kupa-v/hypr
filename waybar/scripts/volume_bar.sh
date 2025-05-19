@@ -16,15 +16,18 @@ volume=$(pactl list sinks | awk -v sink="$sink" '
 # Get mute state
 muted=$(pactl get-sink-mute "$sink" | awk '{print $2}')
 
-# Handle missing volume case
+# Ensure we have a valid integer volume
 volume=${volume:-0}
+volume=$((volume < 0 ? 0 : volume > 100 ? 100 : volume))
 
-# Format to two digits
+# Pad to two digits
 volume_fmt=$(printf "%02d" "$volume")
 
-# Build bar
+# Clamp and calculate bar
 filled=$((volume / 10))
+((filled > 10)) && filled=10
 empty=$((10 - filled))
+((empty < 0)) && empty=0
 
 bar=""
 if (( filled > 0 )); then
@@ -34,7 +37,7 @@ if (( empty > 0 )); then
   bar+=$(printf '░%.0s' $(seq 1 $empty))
 fi
 
-# Output
+# Output with icon
 if [[ "$muted" == "yes" ]]; then
   icon=""
   printf "%s [ ---------- ] --%%\n" "$icon"
