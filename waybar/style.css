@@ -8,7 +8,7 @@
 
 /* Shared Module Styling */
 #clock{
-	padding: 4px;
+	padding: 0px 8px 0px 8px;
 	margin-left: 0px;
 	margin-right: 10px;
 	border-radius: 4px;
@@ -17,7 +17,7 @@
 
 /* Network Styling */
 #network{
-	padding: 4px;
+	padding: 0px 8px 0px 8px;
 	margin-left: 10px;
 	margin-right: 10px;
 	border-radius: 4px;
@@ -26,7 +26,7 @@
 
 /* Bluetooth Styling */
 #bluetooth{
-	padding: 4px;
+	padding: 0px 8px 0px 8px;
 	margin-left: 10px;
 	margin-right: 10px;
 	border-radius: 4px;
@@ -47,7 +47,7 @@
   min-width: 130px;
   margin-left: 10px;
   margin-right: 10px;
-  padding: 4px;
+  padding: 0px 8px 0px 8px;
   border-radius: 4px;
   background: #1A2543;
 }
@@ -57,7 +57,7 @@
   min-width: 130px;
   margin-left: 10px;
   margin-right: 0px;
-  padding: 4px;
+  padding: 0px 8px 0px 8px;
   border-radius: 4px;
   background: #1A2543;
 }
