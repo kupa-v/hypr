@@ -47,8 +47,8 @@
     "format-icons": {
       "1": "󰏝",
       "2": "󰏝",
-      "active": "<span font_desc='JetBrainsMono Nerd Font 13' foreground='#66ccff'></span>",
-      "default": "<span font_desc='JetBrainsMono Nerd Font 13'>󰏝</span>"
+      "active": "[]",
+      "default": "[󰏝]"
     },
     "persistent-workspaces": [1, 2],
     "markup": "pango"
@@ -60,8 +60,8 @@
     "format-icons": {
       "3": "󰏝",
       "4": "󰏝",
-      "active": "<span font_desc='JetBrainsMono Nerd Font 13' foreground='#66ccff'></span>",
-      "default": "<span font_desc='JetBrainsMono Nerd Font 13'>󰏝</span>"
+      "active": "[]",
+      "default": "[󰏝]"
     },
     "persistent-workspaces": [3, 4],
     "markup": "pango"
