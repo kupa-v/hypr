@@ -37,5 +37,5 @@ else
   else
     icon=""
   fi
-  printf "%s [ %s ] %s%%%%\n" "$icon" "$bar" "$volume"
+  printf "%s [ %s ] %s%%\n" "$icon" "$bar" "$volume"
 fi
