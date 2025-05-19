@@ -22,7 +22,7 @@
   "network": {
     "format": "",
     "tooltip": true,
-    "tooltip-format": "{ipaddr} ({essid})",
+    "tooltip-format": "[ {essid} ]",
     "on-click": "nm-connection-editor",
     "markup": "pango"
   },
@@ -30,7 +30,7 @@
   "bluetooth": {
     "format": "",
     "tooltip": true,
-    "tooltip-format": "{device_alias} ({device_address})",
+    "tooltip-format": "[ {device_alias} ]",
     "on-click": "blueman-manager",
     "markup": "pango"
   },
