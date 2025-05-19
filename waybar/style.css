@@ -1,20 +1,14 @@
 /* Global Defaults */
 * {
-  border: 2px solid #66ccff;
-  border-radius: 4px;
-  padding: 6px 10px;
-  margin: 0 4px;
   font-family: GohuFont;
   font-size: 13px;
-  /* background: transparent; */
-  background: #3c3c4e;
+  background: transparent;
 }
 
 /* Shared Module Styling */
 #clock{
 	padding: 6px 10px;
-},
-
+}
 #network,
 #bluetooth,
 #custom-status,
@@ -46,8 +40,8 @@
 #custom-status {
   font-weight: bold;
   color: #66ccff;
-  background-color: #0f0f0f;
-  padding: 0 12px;
+  background: #0f0f0f;
+  padding: 0 20px;
 }
 
 /* Tooltip */
