@@ -1,41 +1,34 @@
 {
   "reload_style_on_change": true,
-
   "layer": "top",
   "position": "top",
   "margin-top": 20,
   "margin-left": 20,
   "margin-right": 20,
   "height": 35,
-
   "modules-left": ["clock", "custom/power", "network", "bluetooth", "custom/mic"],
   "modules-center": ["custom/status"],
   "modules-right": ["pulseaudio", "battery"],
-
   "clock": {
     "format": "[  {:%I:%M %p}]",
     "tooltip-format": "{:%A, %B %d, %Y}",
     "interval": 60
   },
-
   "custom/power": {
     "format": "[ ⏻ ]",
     "tooltip": false,
     "on-click": "wlogout -p layer-shell"
   },
-
   "network": {
     "format": "[  ]",
     "tooltip": false,
     "on-click": "nm-connection-editor"
   },
-
   "bluetooth": {
     "format": "[  ]",
     "tooltip": false,
     "on-click": "blueman-manager"
   },
-
   "custom/mic": {
     "format": "[  ]",
     "tooltip": false,
@@ -43,28 +36,25 @@
     "on-click": "~/.config/waybar/scripts/toggle_mic.sh",
     "interval": 5
   },
-
   "custom/status": {
     "format": "[ smile ]",
     "tooltip": false
   },
-
   "pulseaudio": {
-    "format": "{volume}%",
-    "format-bluetooth": "{volume}% ",
-    "format-muted": "",
+    "format": "[{volume}%]",
+    "format-bluetooth": "[{volume}% ]",
+    "format-muted": "[]",
     "format-icons": ["", "", ""],
     "tooltip": false,
     "scroll-step": 1,
     "on-click": "pavucontrol"
   },
-
   "battery": {
     "states": {
       "warning": 30,
       "critical": 15
     },
-    "format": "{capacity}%",
+    "format": "[{capacity}%]",
     "format-icons": ["", "", "", "", ""],
     "tooltip": false
   }
