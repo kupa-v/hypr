@@ -13,14 +13,14 @@
   "modules-right": ["custom/volume", "custom/battery"],
 
   "clock": {
-    "format": " {:%H:%M}",
+    "format": "[  {:%H:%M} ]",
     "tooltip-format": "{:%A, %B %d, %Y}",
     "interval": 60,
     "markup": "pango"
   },
 
   "network": {
-    "format": "",
+    "format": "[   ]",
     "tooltip": true,
     "tooltip-format": "[ {essid} ]",
     "on-click": "nm-connection-editor",
@@ -28,7 +28,7 @@
   },
 
   "bluetooth": {
-    "format": "",
+    "format": "[  ]",
     "tooltip": true,
     "tooltip-format": "[ {device_alias} ]",
     "on-click": "blueman-manager",
