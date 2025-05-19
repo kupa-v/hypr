@@ -33,6 +33,19 @@
   color: #e0e0e0;
 }
 
+/* Hover feedback */
+#clock:hover,
+#custom-power:hover,
+#network:hover,
+#bluetooth:hover,
+#custom-mic:hover,
+#custom-status:hover,
+#battery:hover,
+#pulseaudio:hover {
+  background-color: #44475a;
+  border-color: #6272a4;
+}
+
 /* Battery bar */
 #battery {
   background: #1e1e2e;
