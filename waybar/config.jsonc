@@ -9,7 +9,7 @@
   "height": 35,
 
   "modules-left": ["clock", "network", "bluetooth", "custom/mic"],
-  "modules-center": ["hyprland/workspaces-left", "custom/status", "hyprland/workspaces-right"],
+  "modules-center": ["hyprland/workspaces", "custom/status"],
   "modules-right": ["custom/volume", "custom/battery"],
 
   "clock": {
@@ -34,15 +34,23 @@
     "on-click": "blueman-manager",
     "markup": "pango"
   },
-
+  "hyprland/workspaces": {
+    "format": "{icon}",
+    "on-click": "activate",
+    "format-icons": {
+      "active": "[]",
+      "default": "[󰏝]"
+    },
+    "persistent-workspaces": [1, 2, 3, 4],
+    "markup": "pango"
+  },
   "custom/status": {
     "format": "[ smile ]",
     "tooltip": false,
     "markup": "pango"
   },
 
-  "hyprland/workspaces-left": {
-    "format": "{icon}",
+  ",
     "on-click": "activate",
     "format-icons": {
       "1": "󰏝",
@@ -54,8 +62,7 @@
     "markup": "pango"
   },
 
-  "hyprland/workspaces-right": {
-    "format": "{icon}",
+  ",
     "on-click": "activate",
     "format-icons": {
       "3": "󰏝",
@@ -66,10 +73,6 @@
     "persistent-workspaces": [3, 4],
     "markup": "pango"
   },
-
-  
-
-  
 
   "custom/volume": {
     "exec": "~/.config/waybar/scripts/volume_bar.sh",
