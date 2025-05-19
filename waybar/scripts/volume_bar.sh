@@ -1,21 +1,22 @@
 #!/bin/bash
 
-# Get the active default sink
-sink=$(pactl info | grep "Default Sink" | cut -d ' ' -f3)
+# Get the default sink
+sink=$(pactl info | awk -F': ' '/Default Sink/ {print $2}')
 
-# Get volume and mute state
+# Get volume percentage from that sink
 volume=$(pactl get-sink-volume "$sink" | grep -oP '[0-9]+(?=%)' | head -1)
+
+# Check mute status
 muted=$(pactl get-sink-mute "$sink" | awk '{print $2}')
 
-# Clamp and build bar
-volume=$((volume > 100 ? 100 : volume))
+# Clamp and bar logic
 filled=$((volume / 10))
 empty=$((10 - filled))
 
 bar=$(printf '█%.0s' $(seq 1 $filled))
 bar+=$(printf '░%.0s' $(seq 1 $empty))
 
-# Output with icon
+# Output with icons
 if [[ "$muted" == "yes" ]]; then
   icon=""
   printf "%s [ ---------- ] --%%\n" "$icon"
@@ -27,5 +28,5 @@ else
   else
     icon=""
   fi
-  printf "%s [ %s ] %s%%\n" "$icon" "$bar" "$volume"
+  printf "%s [ %s ] %s%%%%\n" "$icon" "$bar" "$volume"
 fi
