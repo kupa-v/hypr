@@ -10,7 +10,7 @@
 
   "modules-left": ["clock", "custom/power", "network", "bluetooth", "custom/mic"],
   "modules-center": ["custom/status"],
-  "modules-right": ["pulseaudio", "battery"],
+  "modules-right": ["custom/volume", "custom/battery"],
 
   "clock": {
     "format": "[   {:%I:%M %p} ]",
@@ -25,13 +25,13 @@
   },
 
   "network": {
-    "format": "[  ]",
+    "format": "[   ]",
     "tooltip": false,
     "on-click": "nm-connection-editor"
   },
 
   "bluetooth": {
-    "format": "[]",
+    "format": "[  ]",
     "tooltip": false,
     "on-click": "blueman-manager"
   },
@@ -41,23 +41,16 @@
     "tooltip": false
   },
 
-  "pulseaudio": {
-    "format": "{volume}%",
-    "format-bluetooth": "{volume}% ",
-    "format-muted": "",
-    "format-icons": ["", "", ""],
+  "custom/volume": {
+    "exec": "~/.config/waybar/scripts/volume_bar.sh",
+    "interval": 5,
     "tooltip": false,
-    "scroll-step": 1,
     "on-click": "pavucontrol"
   },
 
-  "battery": {
-    "states": {
-      "warning": 30,
-      "critical": 15
-    },
-    "format": "{capacity}%",
-    "format-icons": ["", "", "", "", ""],
+  "custom/battery": {
+    "exec": "~/.config/waybar/scripts/battery_bar.sh",
+    "interval": 30,
     "tooltip": false
   }
 }
