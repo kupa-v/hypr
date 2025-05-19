@@ -5,9 +5,9 @@ output=""
 
 for i in 1 2; do
   if [ "$i" -eq "$active" ]; then
-    output+="<span class='icon' style='color:#66ccff;'></span> "
+    output+="<span font_desc='JetBrainsMono Nerd Font 13' foreground='#66ccff'></span> "
   else
-    output+="<span class='icon'>󰏝</span> "
+    output+="<span font_desc='JetBrainsMono Nerd Font 13'>󰏝</span> "
   fi
 done
 
