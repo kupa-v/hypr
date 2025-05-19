@@ -19,14 +19,20 @@ muted=$(pactl get-sink-mute "$sink" | awk '{print $2}')
 # Handle missing volume case
 volume=${volume:-0}
 
-# Pad volume as two-digit number
+# Format to two digits
 volume_fmt=$(printf "%02d" "$volume")
 
-# Create bar
+# Build bar
 filled=$((volume / 10))
 empty=$((10 - filled))
-bar=$(printf '█%.0s' $(seq 1 $filled))
-bar+=$(printf '░%.0s' $(seq 1 $empty))
+
+bar=""
+if (( filled > 0 )); then
+  bar+=$(printf '█%.0s' $(seq 1 $filled))
+fi
+if (( empty > 0 )); then
+  bar+=$(printf '░%.0s' $(seq 1 $empty))
+fi
 
 # Output
 if [[ "$muted" == "yes" ]]; then

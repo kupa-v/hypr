@@ -7,11 +7,17 @@ status=$(cat /sys/class/power_supply/BAT*/status)
 # Format percentage with leading zero if needed
 capacity_fmt=$(printf "%02d" "$capacity")
 
-# Build bar
+# Calculate bar lengths
 filled=$((capacity / 10))
 empty=$((10 - filled))
-bar=$(printf '█%.0s' $(seq 1 $filled))
-bar+=$(printf '░%.0s' $(seq 1 $empty))
+
+bar=""
+if (( filled > 0 )); then
+  bar+=$(printf '█%.0s' $(seq 1 $filled))
+fi
+if (( empty > 0 )); then
+  bar+=$(printf '░%.0s' $(seq 1 $empty))
+fi
 
 # Choose icon
 if [ "$status" = "Charging" ]; then
