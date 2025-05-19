@@ -3,72 +3,59 @@
 
   "layer": "top",
   "position": "top",
+  "margin-top": 20,
+  "margin-left": 20,
+  "margin-right": 20,
+  "height": 35,
+
   "modules-left": ["clock", "custom/power", "network", "bluetooth", "custom/mic"],
   "modules-center": ["custom/status"],
-  "modules-right": ["custom/cpu", "pulseaudio", "battery"],
+  "modules-right": ["pulseaudio", "battery"],
 
   "clock": {
-    "format": "[  %I:%M %p]"
+    "format": "[  {:%I:%M %p}]",
+    "tooltip-format": "{:%A, %B %d, %Y}",
+    "interval": 60
   },
 
   "custom/power": {
-    "format": "[⏻ ]",
+    "format": "[ ⏻ ]",
     "tooltip": false,
-    "menu": "on-click",
-    "menu-file": "$HOME/.config/waybar/power_menu.xml",
-    "menu-actions": {
-      "shutdown": "shutdown",
-      "reboot": "reboot",
-      "suspend": "systemctl suspend",
-      "hibernate": "systemctl hibernate"
-    }
+    "on-click": "wlogout -p layer-shell"
   },
 
   "network": {
-    "format": "[ ]",
+    "format": "[  ]",
     "tooltip": false,
-    "on-click": "network-manager-applet"
+    "on-click": "nm-connection-editor"
   },
 
   "bluetooth": {
-    "format": "[]",
+    "format": "[  ]",
     "tooltip": false,
-    "on-click": "blueman"
+    "on-click": "blueman-manager"
   },
 
   "custom/mic": {
-    "format": "[]",
+    "format": "[  ]",
     "tooltip": false,
-    "exec": "echo ' '"
+    "exec": "~/.config/waybar/scripts/mic_status.sh",
+    "on-click": "~/.config/waybar/scripts/toggle_mic.sh",
+    "interval": 5
   },
 
   "custom/status": {
-    "format": "[REACTOR SLEEP]",
-    "tooltip": false
-  },
-
-  "custom/cpu": {
-    "exec": "echo '[30%]'",
-    "interval": 5,
+    "format": "[ smile ]",
     "tooltip": false
   },
 
   "pulseaudio": {
-    "format": "[{volume}% {icon} {format_source}]",
-    "format-bluetooth": "[{volume}% {icon} {format_source}]",
-    "format-bluetooth-muted": "[ {icon} {format_source}]",
-    "format-muted": "[ {format_source}]",
-    "format-source": "[{volume}% ]",
-    "format-source-muted": "[]",
-    "format-icons": {
-      "headphone": "",
-      "hands-free": "",
-      "headset": "",
-      "phone": "",
-      "portable": "",
-      "car": "",
-      "default": ["", "", ""]
-    },
+    "format": "{volume}%",
+    "format-bluetooth": "{volume}% ",
+    "format-muted": "",
+    "format-icons": ["", "", ""],
+    "tooltip": false,
+    "scroll-step": 1,
     "on-click": "pavucontrol"
   },
 
@@ -77,11 +64,8 @@
       "warning": 30,
       "critical": 15
     },
-    "format": "[{capacity}% {icon}]",
-    "format-full": "[{capacity}% {icon}]",
-    "format-charging": "[{capacity}% ]",
-    "format-plugged": "[{capacity}% ]",
-    "format-alt": "[{time} {icon}]",
-    "format-icons": ["", "", "", "", ""]
+    "format": "{capacity}%",
+    "format-icons": ["", "", "", "", ""],
+    "tooltip": false
   }
 }

@@ -1,31 +1,89 @@
+/* Global Defaults */
 * {
-  font-family: "JetBrainsMono Nerd Font", monospace;
+  border: none;
+  border-radius: 0;
+  padding: 0 8px;
+  margin: 0 4px;
+  font-family: JetBrainsMono Nerd Font, monospace;
   font-size: 13px;
-  color: #ffffff;
   background: transparent;
+  color: #e0e0e0;
+  min-height: 35px;
 }
 
-window#waybar {
-  background: transparent;
+#waybar {
+  background: #000000;
   margin-top: 20px;
   margin-left: 20px;
   margin-right: 20px;
-  padding: 0;
-  border: none;
+  height: 35px;
 }
 
+/* Module containers */
 #clock,
 #custom-power,
 #network,
 #bluetooth,
 #custom-mic,
 #custom-status,
-#custom-cpu,
-#pulseaudio,
-#battery {
-  background-color: #2e2e3e;
-  margin: 2px;
+#battery,
+#pulseaudio {
+  background-color: #1e1e2e;
+  border: 1px solid #3c3c4e;
   padding: 0 10px;
-  border-radius: 4px;
-  min-height: 35px;
+  color: #e0e0e0;
+}
+
+/* Square brackets */
+#clock::before,
+#custom-power::before,
+#network::before,
+#bluetooth::before,
+#custom-mic::before,
+#custom-status::before,
+#battery::before,
+#pulseaudio::before {
+  content: "[";
+  margin-right: 4px;
+}
+
+#clock::after,
+#custom-power::after,
+#network::after,
+#bluetooth::after,
+#custom-mic::after,
+#custom-status::after,
+#battery::after,
+#pulseaudio::after {
+  content: "]";
+  margin-left: 4px;
+}
+
+/* Battery bar */
+#battery {
+  background: #1e1e2e;
+  padding: 0;
+  min-width: 100px;
+  color: white;
+}
+
+#battery.critical {
+  color: #ff5555;
+}
+
+/* PulseAudio bar (horizontal visual like the image) */
+#pulseaudio {
+  min-width: 130px;
+  background: linear-gradient(to right, #f28b82 0%, #f28b82 var(--volume), #3c3c4e var(--volume), #3c3c4e 100%);
+  color: #ffffff;
+  text-align: right;
+}
+
+/* Optional visual tweaks */
+#custom-status {
+  font-weight: bold;
+  color: #66ccff;
+  background-color: #0f0f0f;
+  padding: 0 12px;
+  text-transform: uppercase;
 }
