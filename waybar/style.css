@@ -9,22 +9,28 @@
 /* Shared Module Styling */
 #clock{
 	padding: 4px;
+	margin-left: 0px;
+	margin-right: 10px;
 	border-radius: 4px;
-	background: #324679;
+	background: #1A2543;
 }
 
 /* Network Styling */
 #network{
 	padding: 4px;
+	margin-left: 10px;
+	margin-right: 10px;
 	border-radius: 4px;
-	background: #324679;
+	background: #1A2543;
 }
 
 /* Bluetooth Styling */
 #bluetooth{
 	padding: 4px;
+	margin-left: 10px;
+	margin-right: 10px;
 	border-radius: 4px;
-	background: #324679;
+	background: #1A2543;
 }
 
 /* Status Module */
@@ -39,17 +45,21 @@
 /* Volume Module */
 #custom-volume {
   min-width: 130px;
+  margin-left: 10px;
+  margin-right: 10px;
   padding: 4px;
   border-radius: 4px;
-  background: #324679;
+  background: #1A2543;
 }
 
 /* Battery Specific Styling */
 #custom-battery {
   min-width: 130px;
+  margin-left: 10px;
+  margin-right: 0px;
   padding: 4px;
   border-radius: 4px;
-  background: #324679;
+  background: #1A2543;
 }
 
 /* Battery Levels */
