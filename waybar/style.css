@@ -2,9 +2,7 @@
   font-family: "JetBrainsMono Nerd Font", monospace;
   font-size: 13px;
   color: #ffffff;
-  border: none;
   background: transparent;
-  min-height: 0;
 }
 
 window#waybar {
@@ -12,10 +10,11 @@ window#waybar {
   margin-top: 20px;
   margin-left: 20px;
   margin-right: 20px;
-  height: 35px;
+  padding: 0;
+  border: none;
+  /* height is invalid here; use min-height on modules instead */
 }
 
-/* Style each module box */
 #clock,
 #custom-power,
 #network,
@@ -27,8 +26,10 @@ window#waybar {
 #battery {
   background-color: #2e2e3e;
   margin: 2px;
-  padding: 0 8px;
+  padding: 0 10px;
   border-radius: 4px;
+  min-height: 35px; /* controls module height */
+  /* optionally use line-height or vertical padding to fine-tune */
 }
 
 /* Add square brackets around module content */
