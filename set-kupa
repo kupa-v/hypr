@@ -18,7 +18,7 @@
 # grim: This is a screenshot tool it grabs images from a Wayland compositor
 # slurp: This helps with screenshots, it selects a region in a Wayland compositor
 # thunar: This is a graphical file manager
-# polkit-gnome: needed to get superuser access on some graphical appliaction
+# polkit-gnome: needed to get superuser access on some graphical application
 # python-requests: needed for the weather module script to execute
 # pamixer: This helps with audio settings such as volume
 # pavucontrol: GUI for managing audio and audio devices
@@ -31,9 +31,11 @@
 # thunar-archive-plugin: Provides a front ent for thunar to work with compressed files
 # file-roller: Backend set of tools for working with compressed files
 # fastfetch: displays information about the operating system, software, and hardware in a visually appealing way
+# cowsay: hehe cow say moo
 # btop: Resource monitor that shows usage and stats for processor, memory, disks, network and processes.
 # pacman-contrib: adds additional tools for pacman. needed for showing system updates in the waybar
 # gohufont-otb: a monospace bitmap font well suited for programming and terminal use
+# ttf-jetbrains-mono-nerd: nerd fonts for icons
 # noto-fonts-emoji: fonts needed by the weather script in the top bar
 # lxappearance: used to set GTK theme
 # xfce4-settings: set of tools for xfce, needed to set GTK theme
@@ -137,7 +139,7 @@ if [[ $INST == "Y" || $INST == "y" ]]; then
 
     #Stage 2
     echo -e "\n$CNT - Stage 2 - Installing additional tools and utilities, this may take a while..."
-    for SOFTWR in polkit-gnome python-requests pamixer pavucontrol brightnessctl bluez bluez-utils blueman network-manager-applet gvfs thunar-archive-plugin file-roller btop fastfetch pacman-contrib
+    for SOFTWR in polkit-gnome python-requests pamixer pavucontrol brightnessctl bluez bluez-utils blueman network-manager-applet gvfs thunar-archive-plugin file-roller btop cowsay pacman-contrib
     do
         #First lets see if the package is there
         if yay -Qs $SOFTWR > /dev/null ; then
@@ -156,7 +158,7 @@ if [[ $INST == "Y" || $INST == "y" ]]; then
 
     #Stage 3
     echo -e "\n$CNT - Stage 3 - Installing theme and visual related tools and utilities, this may take a while..."
-    for SOFTWR in gohufont-otb noto-fonts-emoji materia-gtk-theme papirus-icon-theme lxappearance xfce4-settings qt5-svg qt5-quickcontrols2 qt5-graphicaleffects
+    for SOFTWR in gohufont-otb ttf-jetbrains-mono-nerd noto-fonts-emoji materia-gtk-theme papirus-icon-theme lxappearance xfce4-settings qt5-svg qt5-quickcontrols2 qt5-graphicaleffects
     do
         #First lets see if the package is there
         if yay -Qs $SOFTWR > /dev/null ; then

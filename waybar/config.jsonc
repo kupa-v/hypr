@@ -1,0 +1,64 @@
+{
+  "layer": "top",
+  "position": "top",
+  "modules-left": ["clock", "custom/power", "network", "bluetooth", "custom/mic", "custom/location"],
+  "modules-center": ["custom/status"],
+  "modules-right": ["custom/cpu", "pulseaudio", "backlight", "battery"],
+  
+  "clock": {
+    "format": "  %I:%M %p"
+  },
+  
+  "custom/power": {
+    "format": "⏻",
+    "tooltip": false,
+    "exec": "echo ' '"
+  },
+  
+  "network": {
+    "format": " ",
+    "tooltip": false
+  },
+  
+  "bluetooth": {
+    "format": "",
+    "tooltip": false
+  },
+
+  "custom/mic": {
+    "format": "",
+    "tooltip": false,
+    "exec": "echo ' '"
+  },
+
+  "custom/location": {
+    "format": " Japan",
+    "tooltip": false
+  },
+
+  "custom/status": {
+    "format": "REACTOR SLEEP",
+    "tooltip": false
+  },
+
+  "custom/cpu": {
+    "exec": "echo '30%'",
+    "interval": 5,
+    "tooltip": false
+  },
+
+  "pulseaudio": {
+    "format": "{volume}%",
+    "tooltip": false
+  },
+
+  "backlight": {
+    "format": "{percent}%",
+    "tooltip": false
+  },
+
+  "battery": {
+    "format": "{capacity}%",
+    "tooltip": false
+  }
+}
