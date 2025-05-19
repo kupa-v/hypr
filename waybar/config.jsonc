@@ -9,43 +9,63 @@
   "height": 35,
 
   "modules-left": ["clock", "network", "bluetooth", "custom/mic"],
-  "modules-center": ["custom/status"],
+  "modules-center": ["custom/workspace-1-2", "custom/status", "custom/workspace-3-4"],
   "modules-right": ["custom/volume", "custom/battery"],
 
   "clock": {
-    "format": "[   {:%I:%M %p} ]",
+    "format": "<span class='icon'></span> {:%H:%M}",
     "tooltip-format": "{:%A, %B %d, %Y}",
-    "interval": 60
+    "interval": 60,
+    "markup": "pango"
   },
 
   "network": {
-    "format": "[   ]",
-    "tooltip": false,
-    "on-click": "nm-connection-editor"
+    "format": "<span class='icon'></span>",
+    "tooltip": true,
+    "tooltip-format": "{ipaddr} ({essid})",
+    "on-click": "nm-connection-editor",
+    "markup": "pango"
   },
 
   "bluetooth": {
-    "format": "[  ]",
-    "tooltip": false,
-    "on-click": "blueman-manager"
+    "format": "<span class='icon'></span>",
+    "tooltip": true,
+    "tooltip-format": "{device_alias} ({device_address})",
+    "on-click": "blueman-manager",
+    "markup": "pango"
   },
 
   "custom/status": {
     "format": "[ smile ]",
-    "tooltip": false
+    "tooltip": false,
+    "markup": "pango"
+  },
+
+  "custom/workspace-1-2": {
+    "exec": "~/.config/waybar/scripts/workspace_left.sh",
+    "interval": 2,
+    "markup": "pango"
+  },
+
+  "custom/workspace-3-4": {
+    "exec": "~/.config/waybar/scripts/workspace_right.sh",
+    "interval": 2,
+    "markup": "pango"
   },
 
   "custom/volume": {
     "exec": "~/.config/waybar/scripts/volume_bar.sh",
     "interval": 5,
     "tooltip": false,
-    "on-click": "pavucontrol"
+    "on-click": "pavucontrol",
+    "markup": "pango"
   },
 
   "custom/battery": {
     "exec": "~/.config/waybar/scripts/battery_bar.sh",
     "interval": 30,
     "tooltip": false,
-    "return-type": "json"
+    "return-type": "json",
+    "markup": "pango"
   }
 }
