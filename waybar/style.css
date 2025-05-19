@@ -1,17 +1,18 @@
 * {
   font-family: "JetBrainsMono Nerd Font", monospace;
-  font-size: 12px;
-  border: none;
-  border-radius: 6px;
-  margin: 0 2px;
-  padding: 0 10px;
-  background: transparent;
+  font-size: 13px;
   color: #ffffff;
+  border: none;
+  background: transparent;
+  padding: 0 6px;
 }
 
 window#waybar {
-  background: #1e1e2e;
-  border-bottom: 2px solid #44475a;
+  background: transparent;
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  height: 35px;
 }
 
 #clock,
@@ -19,34 +20,37 @@ window#waybar {
 #network,
 #bluetooth,
 #custom-mic,
-#custom-location,
 #custom-status,
 #custom-cpu,
 #pulseaudio,
-#backlight,
 #battery {
-  background-color: #2a2a3c;
-  padding: 4px 10px;
+  background-color: #2e2e3e;
   margin: 2px;
+  padding: 2px 10px;
+  border-radius: 6px;
 }
 
-#custom-status {
-  background-color: #3c3c4e;
-  font-weight: bold;
+/* Add square brackets */
+#clock::before,
+#custom-power::before,
+#network::before,
+#bluetooth::before,
+#custom-mic::before,
+#custom-status::before,
+#custom-cpu::before,
+#pulseaudio::before,
+#battery::before {
+  content: "[ ";
 }
 
-#battery {
-  background-color: #4fd1c5;
-}
-
-#pulseaudio {
-  background-color: #f28b82;
-}
-
-#backlight {
-  background-color: #8be9fd;
-}
-
-#custom-cpu {
-  background-color: #f28b82;
+#clock::after,
+#custom-power::after,
+#network::after,
+#bluetooth::after,
+#custom-mic::after,
+#custom-status::after,
+#custom-cpu::after,
+#pulseaudio::after,
+#battery::after {
+  content: " ]";
 }
