@@ -49,9 +49,6 @@
     "tooltip": false,
     "markup": "pango"
   },
-
-  ",
-    "on-click": "activate",
     "format-icons": {
       "1": "󰏝",
       "2": "󰏝",
