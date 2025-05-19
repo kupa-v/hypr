@@ -34,40 +34,25 @@
     "on-click": "blueman-manager",
     "markup": "pango"
   },
+
   "hyprland/workspaces": {
     "format": "{icon}",
     "on-click": "activate",
     "format-icons": {
+      "1": "󰏝",
+      "2": "󰏝",
+      "3": "󰏝",
+      "4": "󰏝",
       "active": "[]",
       "default": "[󰏝]"
     },
     "persistent-workspaces": [1, 2, 3, 4],
     "markup": "pango"
   },
+
   "custom/status": {
     "format": "[ smile ]",
     "tooltip": false,
-    "markup": "pango"
-  },
-    "format-icons": {
-      "1": "󰏝",
-      "2": "󰏝",
-      "active": "[]",
-      "default": "[󰏝]"
-    },
-    "persistent-workspaces": [1, 2],
-    "markup": "pango"
-  },
-
-  ",
-    "on-click": "activate",
-    "format-icons": {
-      "3": "󰏝",
-      "4": "󰏝",
-      "active": "[]",
-      "default": "[󰏝]"
-    },
-    "persistent-workspaces": [3, 4],
     "markup": "pango"
   },
 
