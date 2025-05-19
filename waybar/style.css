@@ -1,58 +1,44 @@
-* {
-  font-family: "JetBrainsMono Nerd Font", monospace;
-  font-size: 13px;
-  color: #ffffff;
-  background: transparent;
-}
-
-window#waybar {
-  background: transparent;
-  margin-top: 20px;
-  margin-left: 20px;
-  margin-right: 20px;
-  padding: 0;
-  border: none;
-  /* height is invalid here; use min-height on modules instead */
-}
-
-#clock,
-#custom-power,
-#network,
-#bluetooth,
-#custom-mic,
-#custom-status,
-#custom-cpu,
-#pulseaudio,
-#battery {
-  background-color: #2e2e3e;
-  margin: 2px;
-  padding: 0 10px;
-  border-radius: 4px;
-  min-height: 35px; /* controls module height */
-  /* optionally use line-height or vertical padding to fine-tune */
-}
-
-/* Add square brackets around module content */
-#clock::before,
-#custom-power::before,
-#network::before,
-#bluetooth::before,
-#custom-mic::before,
-#custom-status::before,
-#custom-cpu::before,
-#pulseaudio::before,
-#battery::before {
-  content: "[ ";
-}
-
-#clock::after,
-#custom-power::after,
-#network::after,
-#bluetooth::after,
-#custom-mic::after,
-#custom-status::after,
-#custom-cpu::after,
-#pulseaudio::after,
-#battery::after {
-  content: " ]";
+"clock": {
+  "format": "[  %I:%M %p]"
+},
+"custom/power": {
+  "format": "[⏻ ]",
+  ...
+},
+"network": {
+  "format": "[ ]",
+  ...
+},
+"bluetooth": {
+  "format": "[]",
+  ...
+},
+"custom/mic": {
+  "format": "[]",
+  ...
+},
+"custom/status": {
+  "format": "[REACTOR SLEEP]",
+  ...
+},
+"custom/cpu": {
+  "exec": "echo '[30%]'",
+  ...
+},
+"pulseaudio": {
+  "format": "[{volume}% {icon} {format_source}]",
+  "format-bluetooth": "[{volume}% {icon} {format_source}]",
+  "format-bluetooth-muted": "[ {icon} {format_source}]",
+  "format-muted": "[ {format_source}]",
+  "format-source": "[{volume}% ]",
+  "format-source-muted": "[]",
+  ...
+},
+"battery": {
+  "format": "[{capacity}% {icon}]",
+  "format-full": "[{capacity}% {icon}]",
+  "format-charging": "[{capacity}% ]",
+  "format-plugged": "[{capacity}% ]",
+  "format-alt": "[{time} {icon}]",
+  ...
 }
