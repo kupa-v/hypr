@@ -8,7 +8,7 @@
   "margin-right": 20,
   "height": 35,
 
-  "modules-left": ["clock", "custom/power", "network", "bluetooth", "custom/mic"],
+  "modules-left": ["clock", "network", "bluetooth", "custom/mic"],
   "modules-center": ["custom/status"],
   "modules-right": ["custom/volume", "custom/battery"],
 
@@ -16,12 +16,6 @@
     "format": "[   {:%I:%M %p} ]",
     "tooltip-format": "{:%A, %B %d, %Y}",
     "interval": 60
-  },
-
-  "custom/power": {
-    "format": "[⏻ ]",
-    "tooltip": false,
-    "on-click": "wlogout -p layer-shell"
   },
 
   "network": {
