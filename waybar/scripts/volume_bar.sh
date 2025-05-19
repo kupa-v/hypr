@@ -3,7 +3,7 @@
 # Get the default sink
 sink=$(pactl info | awk -F': ' '/Default Sink/ {print $2}')
 
-# Get volume from the first percentage on the first channel line
+# Get volume from that sink
 volume=$(pactl list sinks | awk -v sink="$sink" '
   $0 ~ "Name: "sink {in_sink=1}
   in_sink && /Volume:/ {
@@ -13,20 +13,19 @@ volume=$(pactl list sinks | awk -v sink="$sink" '
   }
 ')
 
-# Get mute status
+# Get mute state
 muted=$(pactl get-sink-mute "$sink" | awk '{print $2}')
 
-# Fallback to 0 if empty
+# Handle missing volume case
 volume=${volume:-0}
 
-# Clamp and build bar
-volume=$((volume > 100 ? 100 : volume))
+# Create bar
 filled=$((volume / 10))
 empty=$((10 - filled))
 bar=$(printf '█%.0s' $(seq 1 $filled))
 bar+=$(printf '░%.0s' $(seq 1 $empty))
 
-# Display
+# Output
 if [[ "$muted" == "yes" ]]; then
   icon=""
   printf "%s [ ---------- ] --%%\n" "$icon"
