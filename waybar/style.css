@@ -3,24 +3,28 @@
   font-family: GohuFont;
   font-size: 13px;
   background: transparent;
+  color: #fff;
 }
 
 /* Shared Module Styling */
 #clock{
 	padding: 4px;
 	border-radius: 4px;
+	background: #324679;
 }
 
 /* Network Styling */
 #network{
 	padding: 4px;
 	border-radius: 4px;
+	background: #324679;
 }
 
 /* Bluetooth Styling */
 #bluetooth{
 	padding: 4px;
 	border-radius: 4px;
+	background: #324679;
 }
 
 /* Status Module */
@@ -35,18 +39,17 @@
 /* Volume Module */
 #custom-volume {
   min-width: 130px;
-  color: #fff;
   padding: 4px;
   border-radius: 4px;
+  background: #324679;
 }
 
 /* Battery Specific Styling */
 #custom-battery {
   min-width: 130px;
-  background: #1e1e2e;
-  color: #fff;
   padding: 4px;
   border-radius: 4px;
+  background: #324679;
 }
 
 /* Battery Levels */
