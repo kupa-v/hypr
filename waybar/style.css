@@ -10,6 +10,7 @@
   color: #e0e0e0;
 }
 
+/* Waybar container */
 #waybar {
   background: #000000;
   margin-top: 20px;
@@ -20,10 +21,8 @@
 
 /* Module containers */
 #clock,
-#custom-power,
 #network,
 #bluetooth,
-#custom-mic,
 #custom-status,
 #battery,
 #pulseaudio {
@@ -35,10 +34,8 @@
 
 /* Hover feedback */
 #clock:hover,
-#custom-power:hover,
 #network:hover,
 #bluetooth:hover,
-#custom-mic:hover,
 #custom-status:hover,
 #battery:hover,
 #pulseaudio:hover {
@@ -46,29 +43,29 @@
   border-color: #6272a4;
 }
 
-/* Battery bar */
+/* Battery bar color override */
 #battery {
+  min-width: 130px;
   background: #1e1e2e;
-  padding: 0;
-  min-width: 100px;
   color: white;
 }
 
+/* Critical battery state */
 #battery.critical {
   color: #ff5555;
 }
 
-/* PulseAudio bar (static fallback) */
+/* Audio volume bar styling */
 #pulseaudio {
   min-width: 130px;
   background: #3c3c4e;
   color: #ffffff;
-  }
+}
 
-/* Optional visual tweaks */
+/* Optional tweaks for status module */
 #custom-status {
   font-weight: bold;
   color: #66ccff;
   background-color: #0f0f0f;
   padding: 0 12px;
-  }
+}
