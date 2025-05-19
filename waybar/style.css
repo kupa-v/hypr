@@ -34,7 +34,7 @@
 }
 
 /* Square brackets */
-#clock::before,
+/* #clock::before,
 #custom-power::before,
 #network::before,
 #bluetooth::before,
@@ -56,7 +56,7 @@
 #pulseaudio::after {
   content: "]";
   margin-left: 4px;
-}
+} */
 
 /* Battery bar */
 #battery {
