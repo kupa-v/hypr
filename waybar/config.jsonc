@@ -1,39 +1,49 @@
 {
   "layer": "top",
   "position": "top",
-  "modules-left": ["clock", "custom/power", "network", "bluetooth", "custom/mic", "custom/location"],
+  "height": 35,
+  "margin-top": 20,
+  "margin-left": 20,
+  "margin-right": 20,
+  "reload_style_on_change": true,
+
+  "modules-left": ["clock", "custom/power", "network", "bluetooth", "custom/mic"],
   "modules-center": ["custom/status"],
-  "modules-right": ["custom/cpu", "pulseaudio", "backlight", "battery"],
-  
+  "modules-right": ["custom/cpu", "pulseaudio", "battery"],
+
   "clock": {
     "format": "  %I:%M %p"
   },
-  
+
   "custom/power": {
-    "format": "⏻",
+    "format": "⏻ ",
     "tooltip": false,
-    "exec": "echo ' '"
+    "menu": "on-click",
+    "menu-file": "$HOME/.config/waybar/power_menu.xml",
+    "menu-actions": {
+      "shutdown": "shutdown",
+      "reboot": "reboot",
+      "suspend": "systemctl suspend",
+      "hibernate": "systemctl hibernate"
+    }
   },
-  
+
   "network": {
     "format": " ",
-    "tooltip": false
+    "tooltip": false,
+    "on-click": "network-manager-applet"
   },
-  
+
   "bluetooth": {
     "format": "",
-    "tooltip": false
+    "tooltip": false,
+    "on-click": "blueman"
   },
 
   "custom/mic": {
     "format": "",
     "tooltip": false,
     "exec": "echo ' '"
-  },
-
-  "custom/location": {
-    "format": " Japan",
-    "tooltip": false
   },
 
   "custom/status": {
@@ -48,17 +58,34 @@
   },
 
   "pulseaudio": {
-    "format": "{volume}%",
-    "tooltip": false
-  },
-
-  "backlight": {
-    "format": "{percent}%",
-    "tooltip": false
+    "format": "{volume}% {icon} {format_source}",
+    "format-bluetooth": "{volume}% {icon} {format_source}",
+    "format-bluetooth-muted": " {icon} {format_source}",
+    "format-muted": " {format_source}",
+    "format-source": "{volume}% ",
+    "format-source-muted": "",
+    "format-icons": {
+      "headphone": "",
+      "hands-free": "",
+      "headset": "",
+      "phone": "",
+      "portable": "",
+      "car": "",
+      "default": ["", "", ""]
+    },
+    "on-click": "pavucontrol"
   },
 
   "battery": {
-    "format": "{capacity}%",
-    "tooltip": false
+    "states": {
+      "warning": 30,
+      "critical": 15
+    },
+    "format": "{capacity}% {icon}",
+    "format-full": "{capacity}% {icon}",
+    "format-charging": "{capacity}% ",
+    "format-plugged": "{capacity}% ",
+    "format-alt": "{time} {icon}",
+    "format-icons": ["", "", "", "", ""]
   }
 }
