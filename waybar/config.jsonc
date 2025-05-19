@@ -20,15 +20,15 @@
   },
 
   "network": {
-    "format": "<span class='icon'></span>",
+    "format": "<span font_desc='JetBrainsMono Nerd Font 13'></span>",
     "tooltip": true,
-    "tooltip-format": "{essid}",
+    "tooltip-format": "{ipaddr} ({essid})",
     "on-click": "nm-connection-editor",
     "markup": "pango"
   },
 
   "bluetooth": {
-    "format": "<span class='icon'></span>",
+    "format": "<span font_desc='JetBrainsMono Nerd Font 13'></span>",
     "tooltip": true,
     "tooltip-format": "{device_alias} ({device_address})",
     "on-click": "blueman-manager",
