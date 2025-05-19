@@ -4,103 +4,68 @@
   border-radius: 0;
   padding: 0 8px;
   margin: 0 4px;
-  font-family: Gohu GohuFont;
+  font-family: GohuFont;
   font-size: 11px;
   background: transparent;
   color: #e0e0e0;
 }
 
-.icon {
-  font-family: JetBrainsMono Nerd Font, monospace;
-  font-size: 13px;
-}
-
-/* Waybar container */
+/* Waybar Container */
 #waybar {
-  background: #000000;
-  margin-top: 20px;
-  margin-left: 20px;
-  margin-right: 20px;
+  background: #000;
+  margin: 20px 20px 0 20px;
   min-height: 35px;
 }
 
-/* Module containers */
+/* Shared Module Styling */
 #clock,
 #network,
 #bluetooth,
 #custom-status,
 #custom-battery,
 #custom-volume,
-#custom-power,
-#custom-mic {
+#custom-power {
   background-color: #1e1e2e;
   border: 1px solid #3c3c4e;
   padding: 0 10px;
-  color: #e0e0e0;
   font-family: GohuFont;
+  color: #e0e0e0;
 }
 
-/* Ensure icons always use icon style */
-#clock .icon,
-#network .icon,
-#bluetooth .icon,
-#custom-status .icon,
-#custom-battery .icon,
-#custom-volume .icon,
-#custom-power .icon,
-#custom-mic .icon {
-  font-family: JetBrainsMono Nerd Font, monospace;
-  font-size: 13px;
-}
-
-/* Hover feedback */
+/* Hover State */
 #clock:hover,
 #network:hover,
 #bluetooth:hover,
-#custom-status:hover,
 #custom-battery:hover,
 #custom-volume:hover,
-#custom-power:hover,
-#custom-mic:hover {
+#custom-power:hover {
   background-color: #44475a;
   border-color: #6272a4;
 }
 
-/* Battery bar color states */
-#custom-battery.verylow {
-  color: #fd5753;
-}
-#custom-battery.low {
-  color: #fb9d4b;
-}
-#custom-battery.medium {
-  color: #daef4d;
-}
-#custom-battery.good {
-  color: #4ef499;
-}
-#custom-battery.full {
-  color: #52f298;
-}
-#custom-battery.charging {
-  color: #a3d4f7;
-}
+/* Battery Levels */
+#custom-battery.verylow { color: #fd5753; }
+#custom-battery.low     { color: #fb9d4b; }
+#custom-battery.medium  { color: #daef4d; }
+#custom-battery.good    { color: #4ef499; }
+#custom-battery.full    { color: #52f298; }
+#custom-battery.charging{ color: #a3d4f7; }
 
-/* Battery bar */
+/* Battery Specific Styling */
 #custom-battery {
   min-width: 130px;
   background: #1e1e2e;
-  color: white;
+  color: #fff;
 }
 
-/* Audio volume bar styling */
+/* Volume Module */
 #custom-volume {
   min-width: 130px;
   background: #3c3c4e;
-  color: #ffffff;
+  color: #fff;
 }
 
-/* Optional tweaks for status module */
+/* Status Module */
 #custom-status {
   font-weight: bold;
   color: #66ccff;
@@ -108,9 +73,9 @@
   padding: 0 12px;
 }
 
-/* Tooltip styling */
+/* Tooltip */
 tooltip {
-  background: #000000;
+  background: #000;
   color: #e0e0e0;
   padding: 6px 10px;
   border-radius: 4px;
