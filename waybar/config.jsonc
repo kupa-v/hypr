@@ -8,7 +8,7 @@
   "margin-right": 20,
   "height": 35,
 
-  "modules-left": ["clock", "network", "bluetooth"],
+  "modules-left": ["clock", "custom/power", "network", "bluetooth", "custom/mic"],
   "modules-center": ["custom/status"],
   "modules-right": ["pulseaudio", "battery"],
 
@@ -16,6 +16,12 @@
     "format": "[   {:%I:%M %p} ]",
     "tooltip-format": "{:%A, %B %d, %Y}",
     "interval": 60
+  },
+
+  "custom/power": {
+    "format": "[ ⏻ ]",
+    "tooltip": false,
+    "on-click": "wlogout -p layer-shell"
   },
 
   "network": {
@@ -31,23 +37,18 @@
   },
 
   "custom/status": {
-    "format": "[smile]",
+    "format": "[ smile ]",
     "tooltip": false
   },
 
   "pulseaudio": {
-    "format": "{volume}% {icon} [{bar}]",
-    "format-bluetooth": "{volume}%  [{bar}]",
-    "format-muted": " [----------]",
+    "format": "{volume}%",
+    "format-bluetooth": "{volume}% ",
+    "format-muted": "",
     "format-icons": ["", "", ""],
     "tooltip": false,
     "scroll-step": 1,
-    "on-click": "pavucontrol",
-    "bar": {
-      "min-length": 10,
-      "full": "█",
-      "empty": "░"
-    }
+    "on-click": "pavucontrol"
   },
 
   "battery": {
@@ -55,13 +56,8 @@
       "warning": 30,
       "critical": 15
     },
-    "format": "{capacity}% [{bar}]",
+    "format": "{capacity}%",
     "format-icons": ["", "", "", "", ""],
-    "tooltip": false,
-    "bar": {
-      "min-length": 10,
-      "full": "█",
-      "empty": "░"
-    }
+    "tooltip": false
   }
 }

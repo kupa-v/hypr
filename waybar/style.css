@@ -1,3 +1,5 @@
+/* renamed from 'Waybar Style' to 'style.css' */
+
 /* Global Defaults */
 * {
   border: none;
@@ -24,8 +26,8 @@
 #network,
 #bluetooth,
 #custom-status,
-#battery,
-#pulseaudio {
+#custom-battery,
+#custom-volume {
   background-color: #1e1e2e;
   border: 1px solid #3c3c4e;
   padding: 0 10px;
@@ -37,26 +39,26 @@
 #network:hover,
 #bluetooth:hover,
 #custom-status:hover,
-#battery:hover,
-#pulseaudio:hover {
+#custom-battery:hover,
+#custom-volume:hover {
   background-color: #44475a;
   border-color: #6272a4;
 }
 
 /* Battery bar color override */
-#battery {
+#custom-battery {
   min-width: 130px;
   background: #1e1e2e;
   color: white;
 }
 
 /* Critical battery state */
-#battery.critical {
+#custom-battery.critical {
   color: #ff5555;
 }
 
 /* Audio volume bar styling */
-#pulseaudio {
+#custom-volume {
   min-width: 130px;
   background: #3c3c4e;
   color: #ffffff;
