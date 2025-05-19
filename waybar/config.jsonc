@@ -22,7 +22,7 @@
   "network": {
     "format": "<span class='icon'></span>",
     "tooltip": true,
-    "tooltip-format": "{ipaddr} ({essid})",
+    "tooltip-format": "{essid}",
     "on-click": "nm-connection-editor",
     "markup": "pango"
   },
