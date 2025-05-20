@@ -11,9 +11,9 @@ dynamic_padding = false
 startup_mode = "Windowed"
 
 [font]
-normal = { family = "GohuFont", style = "Regular" }
-bold = { family = "GohuFont", style = "Bold" }
-italic = { family = "GohuFont", style = "Italic" }
+normal = { family = "Gohu GohuFont", style = "Regular" }
+bold = { family = "Gohu GohuFont", style = "Bold" }
+italic = { family = "Gohu GohuFont", style = "Italic" }
 size = 11.0
 
 [colors.primary]
