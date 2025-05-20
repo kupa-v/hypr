@@ -50,7 +50,6 @@ white   = "0xffffff"
 
 [cursor]
 style = "Beam"
-blink = true
 
 [selection]
 save_to_clipboard = true
