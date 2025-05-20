@@ -1,6 +1,6 @@
 /* Global Defaults */
 * {
-  font-family: GohuFont;
+  font-family: Gohu GohuFont;
   font-size: 13px;
   background: transparent;
   color: #fff;
@@ -77,7 +77,7 @@ tooltip {
   padding: 6px 10px;
   border-radius: 2px;
   border: 1px solid #444;
-  font-family: GohuFont, monospace;
+  font-family: Gohu GohuFont, monospace;
   font-size: 11px;
   margin-top: 2px;
 }
