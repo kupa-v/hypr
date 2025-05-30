@@ -35,14 +35,12 @@
     "markup": "pango"
   },
 
- "custom/spotify": {
+  "custom/spotify": {
     "exec": "~/.config/waybar/scripts/spotify.sh",
     "interval": 5,
     "return-type": "json",
     "tooltip": true,
-    "on-click": "playerctl play-pause",
-    "on-scroll-up": "playerctl next",
-    "on-scroll-down": "playerctl previous",
+    "on-click": "~/.config/waybar/scripts/spotify_click.sh",
     "markup": "pango"
   },
 
