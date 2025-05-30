@@ -53,13 +53,12 @@
   },
 
   "custom/input-method": {
-    "exec": "~/.config/waybar/scripts/im-toggle.sh",
+    "exec": "~/.config/waybar/scripts/im-status.sh",
     "return-type": "json",
     "interval": 1,
     "on-click": "~/.config/waybar/scripts/im-toggle.sh",
     "tooltip": true
-  },
-
+}
 
   "custom/volume": {
     "exec": "~/.config/waybar/scripts/volume_bar.sh",
