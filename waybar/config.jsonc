@@ -10,7 +10,7 @@
 
   "modules-left": ["clock", "network", "bluetooth", "custom/spotify"],
   "modules-center": ["custom/status"],
-  "modules-right": ["custom/volume", "custom/battery"],
+  "modules-right": ["custom/input-method", "custom/volume", "custom/battery"],
 
   "clock": {
     "format": "[  {:%H:%M} ]",
@@ -51,6 +51,15 @@
     "tooltip": false,
     "markup": "pango"
   },
+
+  "custom/input-method": {
+    "exec": "~/.config/waybar/scripts/im-toggle.sh",
+    "return-type": "json",
+    "interval": 1,
+    "on-click": "~/.config/waybar/scripts/im-toggle.sh",
+    "tooltip": true
+  },
+
 
   "custom/volume": {
     "exec": "~/.config/waybar/scripts/volume_bar.sh",
