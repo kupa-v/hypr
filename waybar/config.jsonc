@@ -40,11 +40,11 @@
     "interval": 5,
     "return-type": "json",
     "tooltip": true,
-    "on-click": "playerctl play-pause",
-    "on-scroll-up": "playerctl next",
-    "on-scroll-down": "playerctl previous",
+    "on-click": "bash -c 'pgrep -x spotify >/dev/null && playerctl play-pause || spotify &'",
+    "on-click-right": "playerctl next",
+    "on-click-middle": "playerctl previous",
     "markup": "pango"
-  },
+}
 
   "custom/status": {
     "format": "[ smile ]",
