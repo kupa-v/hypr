@@ -41,8 +41,6 @@
     "return-type": "json",
     "tooltip": true,
     "on-click": "bash -c 'pgrep -x spotify >/dev/null && playerctl play-pause || spotify &'",
-    "on-click-right": "playerctl next",
-    "on-click-middle": "playerctl previous",
     "markup": "pango"
 }
 
