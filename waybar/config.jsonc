@@ -8,7 +8,7 @@
   "margin-right": 10,
   "height": 40,
 
-  "modules-left": ["clock", "network", "bluetooth"],
+  "modules-left": ["clock", "network", "bluetooth", "custom/spotify"],
   "modules-center": ["custom/status"],
   "modules-right": ["custom/volume", "custom/battery"],
 
@@ -32,6 +32,17 @@
     "tooltip": true,
     "tooltip-format": "[ {device_alias} ]",
     "on-click": "blueman-manager",
+    "markup": "pango"
+  },
+
+  "custom/spotify": {
+    "exec": "~/.config/waybar/scripts/spotify.sh",
+    "interval": 5,
+    "return-type": "json",
+    "tooltip": true,
+    "on-click": "playerctl play-pause",
+    "on-scroll-up": "playerctl next",
+    "on-scroll-down": "playerctl previous",
     "markup": "pango"
   },
 
