@@ -1,0 +1,114 @@
+# ~/.config/starship.toml
+
+# GLOBAL SETTINGS
+add_newline = true
+scan_timeout = 10
+command_timeout = 1000
+
+format = """
+[](#0f0f0f)$directory[](#0f0f0f)$git_branch$git_status$nodejs$python$golang$docker_context$package$cmd_duration$line_break$jobs$battery$time$character
+"""
+
+# PROMPT SYMBOL
+[character]
+success_symbol = "[](#0f0f0f)"
+error_symbol = "[✗](#0f0f0f red)"
+vicmd_symbol = "[❮](#0f0f0f yellow)"
+
+# FONT
+[username]
+style_user = "bold white"
+show_always = false
+
+# DIRECTORY MODULE
+[directory]
+style = "bold white bg:#0f0f0f"
+format = "[ $path ]($style)"
+truncation_length = 3
+truncation_symbol = "…/"
+read_only = "🔒"
+
+# GIT BRANCH
+[git_branch]
+symbol = " "
+style = "white"
+format = " [$symbol$branch]($style) "
+
+# GIT STATUS
+[git_status]
+style = "bold white"
+format = "([$all_status$ahead_behind]($style) )"
+conflicted = "⚔"
+ahead = "⇡${count}"
+behind = "⇣${count}"
+diverged = "⇕⇡${ahead_count}⇣${behind_count}"
+untracked = " ${count}"
+stashed = "📦 "
+modified = " ${count}"
+staged = "✔ ${count}"
+renamed = " ${count}"
+deleted = " ${count}"
+
+# NODEJS
+[nodejs]
+symbol = " "
+style = "bold green"
+format = "[$symbol($version)]($style) "
+
+# PYTHON
+[python]
+symbol = " "
+style = "bold blue"
+format = "[$symbol$version]($style) "
+
+# GOLANG
+[golang]
+symbol = " "
+style = "bold cyan"
+format = "[$symbol$version]($style) "
+
+# DOCKER
+[docker_context]
+symbol = " "
+style = "blue"
+format = "[$symbol$context]($style) "
+
+# PACKAGE VERSION
+[package]
+symbol = " "
+style = "white"
+format = "[$symbol$version]($style) "
+
+# COMMAND DURATION
+[cmd_duration]
+min_time = 1000
+style = "bold yellow"
+format = "[took $duration]($style) "
+
+# JOBS
+[jobs]
+symbol = "✦"
+style = "bold red"
+
+# BATTERY
+[battery]
+full_symbol = "🔋"
+charging_symbol = "⚡"
+discharging_symbol = "🔌"
+unknown_symbol = "❓"
+empty_symbol = ""
+
+[[battery.display]]
+threshold = 20
+style = "bold red"
+
+[[battery.display]]
+threshold = 50
+style = "bold yellow"
+
+# TIME
+[time]
+disabled = false
+format = "[🕒 $time]($style) "
+time_format = "%H:%M"
+style = "white"
