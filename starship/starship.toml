@@ -1,114 +1,259 @@
-# ~/.config/starship.toml
-
-# GLOBAL SETTINGS
-add_newline = true
-scan_timeout = 10
-command_timeout = 1000
-
-format = """
-[](#0f0f0f)$directory[](#0f0f0f)$git_branch$git_status$nodejs$python$golang$docker_context$package$cmd_duration$line_break$jobs$battery$time$character
-"""
-
-# PROMPT SYMBOL
 [character]
-success_symbol = "[](bg:#0f0f0f fg:white)"
-error_symbol = "[✗](bg:#0f0f0f fg:red)"
-vicmd_symbol = "[❮](bg:#0f0f0f fg:yellow)"
+success_symbol = "[>](bold green)"
+error_symbol = "[x](bold red)"
+vimcmd_symbol = "[<](bold green)"
 
-# FONT
-[username]
-style_user = "bold white"
-show_always = false
+[git_commit]
+tag_symbol = " tag "
 
-# DIRECTORY MODULE
-[directory]
-style = "bold white bg:#0f0f0f"
-format = "[ $path ]($style)"
-truncation_length = 3
-truncation_symbol = "…/"
-read_only = "🔒"
-
-# GIT BRANCH
-[git_branch]
-symbol = " "
-style = "white"
-format = " [$symbol$branch]($style) "
-
-# GIT STATUS
 [git_status]
-style = "bold white"
-format = "([$all_status$ahead_behind]($style) )"
-conflicted = "⚔"
-ahead = "⇡${count}"
-behind = "⇣${count}"
-diverged = "⇕⇡${ahead_count}⇣${behind_count}"
-untracked = " ${count}"
-stashed = "📦 "
-modified = " ${count}"
-staged = "✔ ${count}"
-renamed = " ${count}"
-deleted = " ${count}"
+ahead = ">"
+behind = "<"
+diverged = "<>"
+renamed = "r"
+deleted = "x"
 
-# NODEJS
-[nodejs]
-symbol = " "
-style = "bold green"
-format = "[$symbol($version)]($style) "
+[aws]
+symbol = "aws "
 
-# PYTHON
-[python]
-symbol = " "
-style = "bold blue"
-format = "[$symbol$version]($style) "
+[azure]
+symbol = "az "
 
-# GOLANG
-[golang]
-symbol = " "
-style = "bold cyan"
-format = "[$symbol$version]($style) "
+[buf]
+symbol = "buf "
 
-# DOCKER
+[bun]
+symbol = "bun "
+
+[c]
+symbol = "C "
+
+[cpp]
+symbol = "C++ "
+
+[cobol]
+symbol = "cobol "
+
+[conda]
+symbol = "conda "
+
+[container]
+symbol = "container "
+
+[crystal]
+symbol = "cr "
+
+[cmake]
+symbol = "cmake "
+
+[daml]
+symbol = "daml "
+
+[dart]
+symbol = "dart "
+
+[deno]
+symbol = "deno "
+
+[dotnet]
+symbol = ".NET "
+
+[directory]
+read_only = " ro"
+
 [docker_context]
-symbol = " "
-style = "blue"
-format = "[$symbol$context]($style) "
+symbol = "docker "
 
-# PACKAGE VERSION
+[elixir]
+symbol = "exs "
+
+[elm]
+symbol = "elm "
+
+[fennel]
+symbol = "fnl "
+
+[fossil_branch]
+symbol = "fossil "
+
+[gcloud]
+symbol = "gcp "
+
+[git_branch]
+symbol = "git "
+
+[gleam]
+symbol = "gleam "
+
+[golang]
+symbol = "go "
+
+[gradle]
+symbol = "gradle "
+
+[guix_shell]
+symbol = "guix "
+
+[haskell]
+symbol = "haskell "
+
+[helm]
+symbol = "helm "
+
+[hg_branch]
+symbol = "hg "
+
+[java]
+symbol = "java "
+
+[julia]
+symbol = "jl "
+
+[kotlin]
+symbol = "kt "
+
+[lua]
+symbol = "lua "
+
+[nodejs]
+symbol = "nodejs "
+
+[memory_usage]
+symbol = "memory "
+
+[meson]
+symbol = "meson "
+
+[nats]
+symbol = "nats "
+
+[nim]
+symbol = "nim "
+
+[nix_shell]
+symbol = "nix "
+
+[ocaml]
+symbol = "ml "
+
+[opa]
+symbol = "opa "
+
+[os.symbols]
+AIX = "aix "
+Alpaquita = "alq "
+AlmaLinux = "alma "
+Alpine = "alp "
+Amazon = "amz "
+Android = "andr "
+Arch = "rch "
+Artix = "atx "
+Bluefin = "blfn "
+CachyOS = "cach "
+CentOS = "cent "
+Debian = "deb "
+DragonFly = "dfbsd "
+Emscripten = "emsc "
+EndeavourOS = "ndev "
+Fedora = "fed "
+FreeBSD = "fbsd "
+Garuda = "garu "
+Gentoo = "gent "
+HardenedBSD = "hbsd "
+Illumos = "lum "
+Kali = "kali "
+Linux = "lnx "
+Mabox = "mbox "
+Macos = "mac "
+Manjaro = "mjo "
+Mariner = "mrn "
+MidnightBSD = "mid "
+Mint = "mint "
+NetBSD = "nbsd "
+NixOS = "nix "
+Nobara = "nbra "
+OpenBSD = "obsd "
+OpenCloudOS = "ocos "
+openEuler = "oeul "
+openSUSE = "osuse "
+OracleLinux = "orac "
+Pop = "pop "
+Raspbian = "rasp "
+Redhat = "rhl "
+RedHatEnterprise = "rhel "
+RockyLinux = "rky "
+Redox = "redox "
+Solus = "sol "
+SUSE = "suse "
+Ubuntu = "ubnt "
+Ultramarine = "ultm "
+Unknown = "unk "
+Uos = "uos "
+Void = "void "
+Windows = "win "
+
 [package]
-symbol = " "
-style = "white"
-format = "[$symbol$version]($style) "
+symbol = "pkg "
 
-# COMMAND DURATION
-[cmd_duration]
-min_time = 1000
-style = "bold yellow"
-format = "[took $duration]($style) "
+[perl]
+symbol = "pl "
 
-# JOBS
-[jobs]
-symbol = "✦"
-style = "bold red"
+[php]
+symbol = "php "
 
-# BATTERY
-[battery]
-full_symbol = "🔋"
-charging_symbol = "⚡"
-discharging_symbol = "🔌"
-unknown_symbol = "❓"
-empty_symbol = ""
+[pijul_channel]
+symbol = "pijul "
 
-[[battery.display]]
-threshold = 20
-style = "bold red"
+[pixi]
+symbol = "pixi "
 
-[[battery.display]]
-threshold = 50
-style = "bold yellow"
+[pulumi]
+symbol = "pulumi "
 
-# TIME
-[time]
-disabled = false
-format = "[🕒 $time]($style) "
-time_format = "%H:%M"
-style = "white"
+[purescript]
+symbol = "purs "
+
+[python]
+symbol = "py "
+
+[quarto]
+symbol = "quarto "
+
+[raku]
+symbol = "raku "
+
+[rlang]
+symbol = "r "
+
+[ruby]
+symbol = "rb "
+
+[rust]
+symbol = "rs "
+
+[scala]
+symbol = "scala "
+
+[spack]
+symbol = "spack "
+
+[solidity]
+symbol = "solidity "
+
+[status]
+symbol = "[x](bold red) "
+
+[sudo]
+symbol = "sudo "
+
+[swift]
+symbol = "swift "
+
+[typst]
+symbol = "typst "
+
+[terraform]
+symbol = "terraform "
+
+[zig]
+symbol = "zig "
