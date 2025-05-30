@@ -5,7 +5,7 @@ command_timeout = 1000
 scan_timeout = 10
 
 format = """
-$username$directory$git_branch$git_status$nodejs$python$golang$docker_context$package$cmd_duration$line_break$jobs$battery$time$character
+$hostname$directory$git_branch$git_status$nodejs$python$golang$docker_context$package$cmd_duration$character
 """
 
 [character]
