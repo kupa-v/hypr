@@ -1,10 +1,32 @@
+# ~/.config/starship/starship.toml
+
+add_newline = true
+command_timeout = 1000
+scan_timeout = 10
+
+format = """
+$username$directory$git_branch$git_status$nodejs$python$golang$docker_context$package$cmd_duration$line_break$jobs$battery$time$character
+"""
+
 [character]
 success_symbol = "[>](bold green)"
 error_symbol = "[x](bold red)"
 vimcmd_symbol = "[<](bold green)"
 
-[git_commit]
-tag_symbol = " tag "
+[username]
+style_user = "bold white"
+style_root = "bold red"
+format = "[$user]($style) "
+show_always = true
+
+[directory]
+read_only = " ro"
+truncation_length = 3
+truncation_symbol = "…/"
+style = "white"
+
+[git_branch]
+symbol = "git "
 
 [git_status]
 ahead = ">"
@@ -13,247 +35,112 @@ diverged = "<>"
 renamed = "r"
 deleted = "x"
 
-[aws]
-symbol = "aws "
+[cmd_duration]
+min_time = 500
+style = "bold yellow"
+format = "took [$duration]($style) "
 
-[azure]
-symbol = "az "
+[jobs]
+symbol = "+ "
+style = "bold red"
 
-[buf]
-symbol = "buf "
+[battery]
+full_symbol = "full "
+charging_symbol = "chg "
+discharging_symbol = "bat "
 
-[bun]
-symbol = "bun "
+[[battery.display]]
+threshold = 20
+style = "bold red"
 
-[c]
-symbol = "C "
+[[battery.display]]
+threshold = 50
+style = "bold yellow"
 
-[cpp]
-symbol = "C++ "
-
-[cobol]
-symbol = "cobol "
-
-[conda]
-symbol = "conda "
-
-[container]
-symbol = "container "
-
-[crystal]
-symbol = "cr "
-
-[cmake]
-symbol = "cmake "
-
-[daml]
-symbol = "daml "
-
-[dart]
-symbol = "dart "
-
-[deno]
-symbol = "deno "
-
-[dotnet]
-symbol = ".NET "
-
-[directory]
-read_only = " ro"
-
-[docker_context]
-symbol = "docker "
-
-[elixir]
-symbol = "exs "
-
-[elm]
-symbol = "elm "
-
-[fennel]
-symbol = "fnl "
-
-[fossil_branch]
-symbol = "fossil "
-
-[gcloud]
-symbol = "gcp "
-
-[git_branch]
-symbol = "git "
-
-[gleam]
-symbol = "gleam "
-
-[golang]
-symbol = "go "
-
-[gradle]
-symbol = "gradle "
-
-[guix_shell]
-symbol = "guix "
-
-[haskell]
-symbol = "haskell "
-
-[helm]
-symbol = "helm "
-
-[hg_branch]
-symbol = "hg "
-
-[java]
-symbol = "java "
-
-[julia]
-symbol = "jl "
-
-[kotlin]
-symbol = "kt "
-
-[lua]
-symbol = "lua "
-
-[nodejs]
-symbol = "nodejs "
-
-[memory_usage]
-symbol = "memory "
-
-[meson]
-symbol = "meson "
-
-[nats]
-symbol = "nats "
-
-[nim]
-symbol = "nim "
-
-[nix_shell]
-symbol = "nix "
-
-[ocaml]
-symbol = "ml "
-
-[opa]
-symbol = "opa "
-
-[os.symbols]
-AIX = "aix "
-Alpaquita = "alq "
-AlmaLinux = "alma "
-Alpine = "alp "
-Amazon = "amz "
-Android = "andr "
-Arch = "rch "
-Artix = "atx "
-Bluefin = "blfn "
-CachyOS = "cach "
-CentOS = "cent "
-Debian = "deb "
-DragonFly = "dfbsd "
-Emscripten = "emsc "
-EndeavourOS = "ndev "
-Fedora = "fed "
-FreeBSD = "fbsd "
-Garuda = "garu "
-Gentoo = "gent "
-HardenedBSD = "hbsd "
-Illumos = "lum "
-Kali = "kali "
-Linux = "lnx "
-Mabox = "mbox "
-Macos = "mac "
-Manjaro = "mjo "
-Mariner = "mrn "
-MidnightBSD = "mid "
-Mint = "mint "
-NetBSD = "nbsd "
-NixOS = "nix "
-Nobara = "nbra "
-OpenBSD = "obsd "
-OpenCloudOS = "ocos "
-openEuler = "oeul "
-openSUSE = "osuse "
-OracleLinux = "orac "
-Pop = "pop "
-Raspbian = "rasp "
-Redhat = "rhl "
-RedHatEnterprise = "rhel "
-RockyLinux = "rky "
-Redox = "redox "
-Solus = "sol "
-SUSE = "suse "
-Ubuntu = "ubnt "
-Ultramarine = "ultm "
-Unknown = "unk "
-Uos = "uos "
-Void = "void "
-Windows = "win "
+[time]
+disabled = false
+format = "[$time]($style) "
+time_format = "%H:%M"
+style = "white"
 
 [package]
 symbol = "pkg "
 
-[perl]
-symbol = "pl "
-
-[php]
-symbol = "php "
-
-[pijul_channel]
-symbol = "pijul "
-
-[pixi]
-symbol = "pixi "
-
-[pulumi]
-symbol = "pulumi "
-
-[purescript]
-symbol = "purs "
-
 [python]
 symbol = "py "
 
-[quarto]
-symbol = "quarto "
+[nodejs]
+symbol = "nodejs "
 
-[raku]
-symbol = "raku "
+[golang]
+symbol = "go "
 
-[rlang]
-symbol = "r "
+[docker_context]
+symbol = "docker "
 
-[ruby]
-symbol = "rb "
+# Toolchain Symbols
+[aws]        symbol = "aws "
+[azure]      symbol = "az "
+[buf]        symbol = "buf "
+[bun]        symbol = "bun "
+[c]          symbol = "c "
+[cpp]        symbol = "c++ "
+[cobol]      symbol = "cobol "
+[conda]      symbol = "conda "
+[container]  symbol = "container "
+[crystal]    symbol = "cr "
+[cmake]      symbol = "cmake "
+[daml]       symbol = "daml "
+[dart]       symbol = "dart "
+[deno]       symbol = "deno "
+[dotnet]     symbol = ".net "
+[elixir]     symbol = "exs "
+[elm]        symbol = "elm "
+[fennel]     symbol = "fnl "
+[fossil_branch] symbol = "fossil "
+[gcloud]     symbol = "gcp "
+[gleam]      symbol = "gleam "
+[gradle]     symbol = "gradle "
+[guix_shell] symbol = "guix "
+[haskell]    symbol = "hs "
+[helm]       symbol = "helm "
+[hg_branch]  symbol = "hg "
+[java]       symbol = "java "
+[julia]      symbol = "jl "
+[kotlin]     symbol = "kt "
+[lua]        symbol = "lua "
+[meson]      symbol = "meson "
+[nats]       symbol = "nats "
+[nim]        symbol = "nim "
+[nix_shell]  symbol = "nix "
+[ocaml]      symbol = "ml "
+[opa]        symbol = "opa "
+[perl]       symbol = "pl "
+[php]        symbol = "php "
+[pijul_channel] symbol = "pijul "
+[pixi]       symbol = "pixi "
+[pulumi]     symbol = "pulumi "
+[purescript] symbol = "purs "
+[quarto]     symbol = "quarto "
+[raku]       symbol = "raku "
+[rlang]      symbol = "r "
+[ruby]       symbol = "rb "
+[rust]       symbol = "rs "
+[scala]      symbol = "scala "
+[spack]      symbol = "spack "
+[solidity]   symbol = "solidity "
+[status]     symbol = "[x](bold red) "
+[sudo]       symbol = "sudo "
+[swift]      symbol = "swift "
+[terraform]  symbol = "terraform "
+[typst]      symbol = "typst "
+[zig]        symbol = "zig "
 
-[rust]
-symbol = "rs "
-
-[scala]
-symbol = "scala "
-
-[spack]
-symbol = "spack "
-
-[solidity]
-symbol = "solidity "
-
-[status]
-symbol = "[x](bold red) "
-
-[sudo]
-symbol = "sudo "
-
-[swift]
-symbol = "swift "
-
-[typst]
-symbol = "typst "
-
-[terraform]
-symbol = "terraform "
-
-[zig]
-symbol = "zig "
+[os.symbols]
+Arch = "rch "
+NixOS = "nix "
+Debian = "deb "
+Ubuntu = "ubnt "
+Macos = "mac "
+Windows = "win "
+Linux = "lnx "
