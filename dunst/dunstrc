@@ -2,8 +2,8 @@
     monitor = 0
     follow = mouse
     width = 300
-    height = 300
-    offset = 20x40
+    height = (0, 300)              # dynamic height, max 300px
+    offset = (20, 40)              # 20px from right, 40px from top
     origin = top-right
     transparency = 0
     padding = 8
