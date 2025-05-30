@@ -1,5 +1,4 @@
 [env]
-# Optional: For consistent behavior with CLI tools
 TERM = "xterm-256color"
 
 [window]
@@ -9,12 +8,15 @@ blur = true
 padding = { x = 8, y = 8 }
 dynamic_padding = false
 startup_mode = "Windowed"
+title = "terminal"
+dynamic_title = false
 
 [font]
 normal = { family = "Gohu GohuFont", style = "Regular" }
 bold = { family = "Gohu GohuFont", style = "Bold" }
 italic = { family = "Gohu GohuFont", style = "Italic" }
 size = 11.0
+offset = { x = 0, y = 0 }
 
 [colors.primary]
 background = "0x0f0f0f"
@@ -30,8 +32,8 @@ background = "0x66ccff"
 
 [colors.normal]
 black   = "0x000000"
-red     = "0xfd5753"
-green   = "0x4ef499"
+red     = "0xfd5753"  # x
+green   = "0x4ef499"  # >
 yellow  = "0xdaef4d"
 blue    = "0x66ccff"
 magenta = "0xfb9d4b"
@@ -50,6 +52,7 @@ white   = "0xffffff"
 
 [cursor]
 style = "Beam"
+unfocused_hollow = true
 
 [selection]
 save_to_clipboard = true
