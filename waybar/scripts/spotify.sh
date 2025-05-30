@@ -2,7 +2,7 @@
 
 # Check if Spotify is running
 if ! pgrep -x spotify >/dev/null; then
-  echo "{\"text\": \"[  ]\", \"class\": \"inactive\"}"
+  echo "{\"text\": \"[ spotify ]\", \"class\": \"inactive\"}"
   exit 0
 fi
 
