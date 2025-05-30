@@ -19,6 +19,11 @@ style_root = "bold red"
 format = "[$user]($style) "
 show_always = true
 
+[hostname]
+style = "bold yellow"
+format = "[$hostname]($style) "
+ssh_only = false
+
 [directory]
 read_only = " ro"
 truncation_length = 3
