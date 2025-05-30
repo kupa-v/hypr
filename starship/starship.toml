@@ -20,7 +20,7 @@ format = "[$user]($style) "
 show_always = true
 
 [hostname]
-style = "bold yellow"
+style = "cyan"
 format = "[$hostname]($style) "
 ssh_only = false
 
