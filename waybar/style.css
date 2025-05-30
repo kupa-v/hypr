@@ -33,6 +33,15 @@
 	background: #0f0f0f;
 }
 
+/* Spotify Module */
+#custom-spotify {
+  background-color: #1db954;
+  color: black;
+  font-weight: bold;
+  padding: 0 10px;
+  border: 1px solid #3c3c4e;
+}
+
 /* Status Module */
 #custom-status {
   font-weight: bold;
