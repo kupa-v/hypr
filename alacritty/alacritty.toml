@@ -20,35 +20,36 @@ offset = { x = 0, y = 0 }
 
 [colors.primary]
 background = "0x0f0f0f"
-foreground = "0xffffff"
+foreground = "0xeceff4"  # soft white
 
 [colors.cursor]
 text = "0x0f0f0f"
-cursor = "0x66ccff"
+cursor = "0x88c0d0"  # pastel blue
 
 [colors.selection]
 text = "0x0f0f0f"
-background = "0x66ccff"
+background = "0x88c0d0"
 
 [colors.normal]
-black   = "0x000000"
-red     = "0xfd5753"  # x
-green   = "0x4ef499"  # >
-yellow  = "0xdaef4d"
-blue    = "0x66ccff"
-magenta = "0xfb9d4b"
-cyan    = "0xa3d4f7"
-white   = "0xe0e0e0"
+black   = "0x2e3440"
+red     = "0xeb6f92"  # pastel red/pink
+green   = "0xa3be8c"  # pastel green
+yellow  = "0xf6c177"  # pastel yellow/orange
+blue    = "0x88c0d0"  # pastel blue
+magenta = "0xd08770"  # pastel peach
+cyan    = "0x81a1c1"  # muted cyan
+white   = "0xe5e9f0"
 
 [colors.bright]
-black   = "0x444444"
-red     = "0xfd5753"
-green   = "0x52f298"
-yellow  = "0xdaef4d"
-blue    = "0x66ccff"
-magenta = "0xfb9d4b"
-cyan    = "0xa3d4f7"
+black   = "0x4c566a"
+red     = "0xeb6f92"
+green   = "0xb8d694"
+yellow  = "0xf6c177"
+blue    = "0x8fbcbb"
+magenta = "0xe49b71"
+cyan    = "0x9ccfd8"
 white   = "0xffffff"
+
 
 [cursor]
 style = "Beam"
