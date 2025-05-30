@@ -11,9 +11,9 @@ format = """
 
 # PROMPT SYMBOL
 [character]
-success_symbol = "[](#0f0f0f)"
-error_symbol = "[✗](#0f0f0f red)"
-vicmd_symbol = "[❮](#0f0f0f yellow)"
+success_symbol = "[](bg:#0f0f0f fg:white)"
+error_symbol = "[✗](bg:#0f0f0f fg:red)"
+vicmd_symbol = "[❮](bg:#0f0f0f fg:yellow)"
 
 # FONT
 [username]
