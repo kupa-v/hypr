@@ -11,7 +11,7 @@ title=$(playerctl metadata title 2>/dev/null)
 
 # Display formatted output if available
 if [ -n "$artist" ] && [ -n "$title" ]; then
-  echo "{\"text\": \"  [ $title || $artist ]\", \"class\": \"playing\"}"
+  echo "{\"text\": \" [ $title || $artist ]\", \"class\": \"playing\"}"
 else
   echo "{\"text\": \"[ no music ]\", \"class\": \"paused\"}"
 fi
