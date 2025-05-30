@@ -79,65 +79,173 @@ symbol = "go "
 symbol = "docker "
 
 # Toolchain Symbols
-[aws]        symbol = "aws "
-[azure]      symbol = "az "
-[buf]        symbol = "buf "
-[bun]        symbol = "bun "
-[c]          symbol = "c "
-[cpp]        symbol = "c++ "
-[cobol]      symbol = "cobol "
-[conda]      symbol = "conda "
-[container]  symbol = "container "
-[crystal]    symbol = "cr "
-[cmake]      symbol = "cmake "
-[daml]       symbol = "daml "
-[dart]       symbol = "dart "
-[deno]       symbol = "deno "
-[dotnet]     symbol = ".net "
-[elixir]     symbol = "exs "
-[elm]        symbol = "elm "
-[fennel]     symbol = "fnl "
-[fossil_branch] symbol = "fossil "
-[gcloud]     symbol = "gcp "
-[gleam]      symbol = "gleam "
-[gradle]     symbol = "gradle "
-[guix_shell] symbol = "guix "
-[haskell]    symbol = "hs "
-[helm]       symbol = "helm "
-[hg_branch]  symbol = "hg "
-[java]       symbol = "java "
-[julia]      symbol = "jl "
-[kotlin]     symbol = "kt "
-[lua]        symbol = "lua "
-[meson]      symbol = "meson "
-[nats]       symbol = "nats "
-[nim]        symbol = "nim "
-[nix_shell]  symbol = "nix "
-[ocaml]      symbol = "ml "
-[opa]        symbol = "opa "
-[perl]       symbol = "pl "
-[php]        symbol = "php "
-[pijul_channel] symbol = "pijul "
-[pixi]       symbol = "pixi "
-[pulumi]     symbol = "pulumi "
-[purescript] symbol = "purs "
-[quarto]     symbol = "quarto "
-[raku]       symbol = "raku "
-[rlang]      symbol = "r "
-[ruby]       symbol = "rb "
-[rust]       symbol = "rs "
-[scala]      symbol = "scala "
-[spack]      symbol = "spack "
-[solidity]   symbol = "solidity "
+[aws]
+symbol = "aws "
+
+[azure]
+symbol = "az "
+
+[buf]
+symbol = "buf "
+
+[bun]
+symbol = "bun "
+
+[c]
+symbol = "c "
+
+[cpp]
+symbol = "c++ "
+
+[cobol]
+symbol = "cobol "
+
+[conda]
+symbol = "conda "
+
+[container]
+symbol = "container "
+
+[crystal]
+symbol = "cr "
+
+[cmake]
+symbol = "cmake "
+
+[daml]
+symbol = "daml "
+
+[dart]
+symbol = "dart "
+
+[deno]
+symbol = "deno "
+
+[dotnet]
+symbol = ".net "
+
+[elixir]
+symbol = "exs "
+
+[elm]
+symbol = "elm "
+
+[fennel]
+symbol = "fnl "
+
+[fossil_branch]
+symbol = "fossil "
+
+[gcloud]
+symbol = "gcp "
+
+[gleam]
+symbol = "gleam "
+
+[gradle]
+symbol = "gradle "
+
+[guix_shell]
+symbol = "guix "
+
+[haskell]
+symbol = "hs "
+
+[helm]
+symbol = "helm "
+
+[hg_branch]
+symbol = "hg "
+
+[java]
+symbol = "java "
+
+[julia]
+symbol = "jl "
+
+[kotlin]
+symbol = "kt "
+
+[lua]
+symbol = "lua "
+
+[meson]
+symbol = "meson "
+
+[nats]
+symbol = "nats "
+
+[nim]
+symbol = "nim "
+
+[nix_shell]
+symbol = "nix "
+
+[ocaml]
+symbol = "ml "
+
+[opa]
+symbol = "opa "
+
+[perl]
+symbol = "pl "
+
+[php]
+symbol = "php "
+
+[pijul_channel]
+symbol = "pijul "
+
+[pixi]
+symbol = "pixi "
+
+[pulumi]
+symbol = "pulumi "
+
+[purescript]
+symbol = "purs "
+
+[quarto]
+symbol = "quarto "
+
+[raku]
+symbol = "raku "
+
+[rlang]
+symbol = "r "
+
+[ruby]
+symbol = "rb "
+
+[rust]
+symbol = "rs "
+
+[scala]
+symbol = "scala "
+
+[spack]
+symbol = "spack "
+
+[solidity]
+symbol = "solidity "
+
 [status]
-style = "bold red"
-format = "[$symbol]($style)"
-symbol = "x"
-[sudo]       symbol = "sudo "
-[swift]      symbol = "swift "
-[terraform]  symbol = "terraform "
-[typst]      symbol = "typst "
-[zig]        symbol = "zig "
+symbol = "[x](bold red) "
+
+[sudo]
+symbol = "sudo "
+
+[swift]
+symbol = "swift "
+
+[terraform]
+symbol = "terraform "
+
+[typst]
+symbol = "typst "
+
+[zig]
+symbol = "zig "
 
 [os.symbols]
 Arch = "rch "
