@@ -23,7 +23,7 @@
     "format": "[   ]",
     "tooltip": true,
     "tooltip-format": "[ {essid} ]",
-    "on-click": "nm-connection-editor",
+    "on-click": "bash -c 'nmcli device wifi rescan && nm-connection-editor'"
     "markup": "pango"
   },
 
